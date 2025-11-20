@@ -85,8 +85,6 @@ with open("asu_data.csv", "r") as f:
         declination = line[2]   
         visual_magnitude = line[3]
         name = line[4]
-        if float(visual_magnitude) > 6.5:
-            continue
         data.append(
             Star(star_number, right_ascension, declination, visual_magnitude, name)
         )
