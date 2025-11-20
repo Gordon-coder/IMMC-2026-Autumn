@@ -19,14 +19,6 @@ with open("asu.tsv", "r") as f:
             "name": "",
         })
 
-with open("asu_names.tsv", "r") as f:
-    file_content = f.readlines()
-    for i in range(33,len(file_content)-1):
-        line = file_content[i].strip().split(";")
-        star_number = int(line[0])
-        name = line[1]
-        data[star_number-1]["name"] = name
-
 with open("asu_data.csv", "w") as f:
     f.write("star_number,right_ascension,declination,visual_magnitude,name\n")
     for entry in data:
