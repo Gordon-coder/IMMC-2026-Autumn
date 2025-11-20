@@ -1,4 +1,4 @@
-data = []
+data = {}
 
 with open("asu.tsv", "r") as f:
     file_content = f.readlines()
@@ -11,15 +11,23 @@ with open("asu.tsv", "r") as f:
         if right_ascension == "" or declination == "" or visual_magnitude == "":
             continue
         print(f"{star_number}\t{right_ascension}\t{declination}\t{visual_magnitude}")
-        data.append({
+        data[int(star_number)] = {
             "star_number": star_number,
             "right_ascension": right_ascension,
             "declination": declination,
             "visual_magnitude": visual_magnitude,
             "name": "",
-        })
+        }
+
+with open("asu_names.tsv", "r") as f:
+    file_content = f.readlines()
+    for i in range(33,len(file_content)-1):
+        line = file_content[i].strip().split(";")
+        star_number = int(line[0])
+        name = line[1]
+        data[star_number]["name"] = name
 
 with open("asu_data.csv", "w") as f:
     f.write("star_number,right_ascension,declination,visual_magnitude,name\n")
-    for entry in data:
+    for _, entry in data.items():
         f.write(f"{entry['star_number']},{entry['right_ascension']},{entry['declination']},{entry['visual_magnitude']},{entry['name']}\n")
