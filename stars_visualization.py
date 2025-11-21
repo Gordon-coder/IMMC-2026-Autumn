@@ -124,8 +124,6 @@ else:
 
 pg.init()
 
-pg.mouse.set_visible(False)
-
 screen = pg.display.set_mode((WIDTH, HEIGHT))
 
 # font for star names
@@ -146,25 +144,29 @@ clock = pg.time.Clock()
 # current focal length (zoom). Use a variable so the mouse wheel can change it.
 focal = FOCAL_LENGTH
 
+looking = False
+
 running = True
 while running:
     mouse_pos = pg.mouse.get_rel()
-    camera_yaw += mouse_pos[0] * 2 * 1/focal
-    camera_pitch += mouse_pos[1] * 2 * 1/focal
-    if camera_pitch > math.radians(89.0):
-        camera_pitch = math.radians(89.0)
-    if camera_pitch < math.radians(-89.0):
-        camera_pitch = math.radians(-89.0)
+    if looking:
+        camera_yaw += mouse_pos[0] * 2 * 1/focal
+        camera_pitch += mouse_pos[1] * 2 * 1/focal
+        if camera_pitch > math.radians(89.0):
+            camera_pitch = math.radians(89.0)
+        if camera_pitch < math.radians(-89.0):
+            camera_pitch = math.radians(-89.0)
     camera_vector = np.array([math.cos(camera_pitch) * math.cos(camera_yaw),
-                              math.cos(camera_pitch) * math.sin(camera_yaw),
-                              math.sin(camera_pitch)])
-
-    pg.mouse.set_pos(WIDTH // 2, HEIGHT // 2)
+                            math.cos(camera_pitch) * math.sin(camera_yaw),
+                            math.sin(camera_pitch)])
 
     for event in pg.event.get():
-        if event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE:
+        if event.type == pg.QUIT:
             running = False
-        # mouse wheel (pygame 2+)
+        if event.type == pg.MOUSEBUTTONDOWN:
+            looking = True
+        if event.type == pg.MOUSEBUTTONUP:
+            looking = False
         if event.type == pg.MOUSEWHEEL:
             # event.y is positive when scrolling up (away from user) -> zoom in
             # use multiplicative zoom for smooth scaling
