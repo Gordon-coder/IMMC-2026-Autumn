@@ -25,7 +25,7 @@ from typing import List, Tuple
 import numpy as np
 
 
-def load_star_vectors_from_csv(csv_path: str) -> Tuple[List[dict], np.ndarray]:
+def load_star_vectors_from_csv(csv_path: str) -> Tuple[List[dict], np.ndarray, np.ndarray]:
     """Load star records from a CSV and return star dicts + Nx3 unit vectors.
 
     The CSV is expected to have header: star_number,right_ascension,declination,visual_magnitude,name
@@ -33,6 +33,7 @@ def load_star_vectors_from_csv(csv_path: str) -> Tuple[List[dict], np.ndarray]:
     """
     stars = []
     vectors = []
+    fluxes = []
     with open(csv_path, newline='') as csvfile:
         reader = csv.reader(csvfile)
         header = next(reader, None)
@@ -67,6 +68,10 @@ def load_star_vectors_from_csv(csv_path: str) -> Tuple[List[dict], np.ndarray]:
                 continue
             unit_vec = vec / norm
 
+            # compute flux from visual magnitude using Pogson relation
+            # flux ~ 10^(-0.4 * m)
+            flux = 10 ** (-0.4 * visual_mag)
+
             stars.append({
                 "star_number": star_number,
                 "ra": ra,
@@ -75,14 +80,22 @@ def load_star_vectors_from_csv(csv_path: str) -> Tuple[List[dict], np.ndarray]:
                 "name": name,
             })
             vectors.append(unit_vec)
+            fluxes.append(flux)
 
     if len(vectors) == 0:
-        return stars, np.empty((0, 3), dtype=float)
+        return stars, np.empty((0, 3), dtype=float), np.empty((0,), dtype=float)
     vectors_array = np.vstack(vectors)
-    return stars, vectors_array
+    fluxes_array = np.array(fluxes, dtype=float)
+    return stars, vectors_array, fluxes_array
 
 
-def dbscan_on_sphere(unit_vectors: np.ndarray, eps_radians: float, min_samples: int) -> np.ndarray:
+def dbscan_on_sphere(
+    unit_vectors: np.ndarray,
+    eps_radians: float,
+    min_samples: int,
+    fluxes: np.ndarray = None,
+    min_total_weight: float = 0.0,
+) -> np.ndarray:
     """Run DBSCAN on unit vectors on a sphere using angular radius eps (radians).
 
     We avoid computing arccos by using the dot-product threshold: vectors
@@ -112,7 +125,19 @@ def dbscan_on_sphere(unit_vectors: np.ndarray, eps_radians: float, min_samples: 
         dots = unit_vectors.dot(unit_vectors[point_idx])
         neighbor_indices = np.nonzero(dots >= cos_eps)[0]
 
-        if neighbor_indices.size < min_samples:
+        # Decide core-ness: either by count (min_samples) or by neighbor flux sum
+        is_core = False
+        if fluxes is None or min_total_weight <= 0.0:
+            # fall back to classic DBSCAN core test by neighbor count
+            if neighbor_indices.size >= min_samples:
+                is_core = True
+        else:
+            # weighted core test: sum fluxes of neighbors
+            neighbor_flux_sum = float(fluxes[neighbor_indices].sum())
+            if neighbor_flux_sum >= float(min_total_weight):
+                is_core = True
+
+        if not is_core:
             # mark as noise (labels already -1)
             continue
 
@@ -130,7 +155,18 @@ def dbscan_on_sphere(unit_vectors: np.ndarray, eps_radians: float, min_samples: 
                 visited[neighbor_idx] = True
                 dots_n = unit_vectors.dot(unit_vectors[neighbor_idx])
                 neighbor_neighbors = np.nonzero(dots_n >= cos_eps)[0]
-                if neighbor_neighbors.size >= min_samples:
+                # Determine if this neighbor is itself a core point using the
+                # same rule we used above (count or weighted sum).
+                neighbor_is_core = False
+                if fluxes is None or min_total_weight <= 0.0:
+                    if neighbor_neighbors.size >= min_samples:
+                        neighbor_is_core = True
+                else:
+                    neighbor_neighbors_flux_sum = float(fluxes[neighbor_neighbors].sum())
+                    if neighbor_neighbors_flux_sum >= float(min_total_weight):
+                        neighbor_is_core = True
+
+                if neighbor_is_core:
                     # add newly found neighbors to the queue if they are unlabeled
                     for nn in neighbor_neighbors:
                         if labels[nn] == -1:
@@ -183,17 +219,18 @@ def parse_arguments():
     parser.add_argument("--output", default="asu_clusters.csv", help="Output CSV path")
     parser.add_argument("--eps-deg", type=float, default=6.0, help="Angular neighborhood radius in degrees (default 6)")
     parser.add_argument("--min-samples", type=int, default=4, help="Minimum points to form a cluster (default 4)")
+    parser.add_argument("--min-total-weight", type=float, default=0.0, help="Minimum total neighbor flux to consider a core point (if >0, uses weighted core test)")
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_arguments()
     print(f"Loading stars from {args.input}...")
-    stars, unit_vectors = load_star_vectors_from_csv(args.input)
-    print(f"Loaded {len(stars)} stars; building clusters with eps={args.eps_deg} deg, min_samples={args.min_samples}")
+    stars, unit_vectors, fluxes = load_star_vectors_from_csv(args.input)
+    print(f"Loaded {len(stars)} stars; building clusters with eps={args.eps_deg} deg, min_samples={args.min_samples}, min_total_weight={args.min_total_weight}")
 
     eps_radians = math.radians(args.eps_deg)
-    labels = dbscan_on_sphere(unit_vectors, eps_radians, args.min_samples)
+    labels = dbscan_on_sphere(unit_vectors, eps_radians, args.min_samples, fluxes=fluxes, min_total_weight=args.min_total_weight)
 
     num_clusters = len(set(labels.tolist()) - {-1})
     print(f"DBSCAN finished. Found {num_clusters} clusters (noise labeled -1).")

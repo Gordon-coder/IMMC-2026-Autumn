@@ -136,6 +136,15 @@ else:
     unit_vectors = np.empty((0, 3))
     visual_magnitudes = np.empty((0,))
 
+# compute flux for each star (Pogson relation) and a normalized flux for display
+if visual_magnitudes.size > 0:
+    fluxes = 10 ** (-0.4 * visual_magnitudes)
+    max_flux = float(fluxes.max()) if fluxes.max() > 0 else 1.0
+    norm_fluxes = fluxes / max_flux
+else:
+    fluxes = np.empty((0,))
+    norm_fluxes = np.empty((0,))
+
 pg.init()
 
 screen = pg.display.set_mode((WIDTH, HEIGHT))
@@ -278,6 +287,32 @@ while running:
         xs = screen_xs[on_screen].astype(int)
         ys = screen_ys[on_screen].astype(int)
 
+        for xi, yi, idx in zip(xs, ys, vis_indices):
+            # color by cluster base color, modulated by normalized flux
+            if render_custom_constellations:
+                cid = data[idx].cluster_id
+                base_color = cluster_colors.get(cid, (255, 255, 255))
+                # normalized flux in [0,1]; fall back to a simple mag-based factor if missing
+                # fallback mapping: brighter (smaller mag) -> larger factor
+                f = max(0.0, min(1.0, 1.0 - visual_magnitudes[idx] * 40/255))
+
+                # keep colors visible: scale between 0.25 and 1.0
+                scale = 0.1 + 0.9 * f
+                color = (int(base_color[0] * scale), int(base_color[1] * scale), int(base_color[2] * scale))
+            else:
+                brightness = min(255, max(0, 255-visual_magnitudes[idx]*40))
+                color = (brightness, brightness, brightness)
+            # radius scaled slightly by brightness
+            pg.draw.circle(screen, color, (int(xi), int(yi)), 2)
+            # draw name above the star if present (cached surface)
+            text_surf = name_surfaces[idx]
+            if text_surf is not None:
+                tx = int(xi) - text_surf.get_width() // 2
+                ty = int(yi) - text_surf.get_height() - 4
+                # simple occlusion: only draw if above the top of the screen
+                if ty + text_surf.get_height() >= 0:
+                    screen.blit(text_surf, (tx, ty))
+
         # Render cluster backgrounds using the selected method before drawing stars
         if render_custom_constellations:
             cluster_points_dict = {}
@@ -300,22 +335,6 @@ while running:
             
             # Render overlays using dispatcher with visibility filter
             render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_points_dict, alpha_value=40)
-
-        for xi, yi, idx in zip(xs, ys, vis_indices):
-            if render_custom_constellations:
-                color = cluster_colors[data[idx].cluster_id]
-            else:
-                brightness = min(255, max(0, 255-visual_magnitudes[idx]*40))
-                color = (brightness, brightness, brightness)
-            pg.draw.circle(screen, color, (int(xi), int(yi)), 2)
-            # draw name above the star if present (cached surface)
-            text_surf = name_surfaces[idx]
-            if text_surf is not None:
-                tx = int(xi) - text_surf.get_width() // 2
-                ty = int(yi) - text_surf.get_height() - 4
-                # simple occlusion: only draw if above the top of the screen
-                if ty + text_surf.get_height() >= 0:
-                    screen.blit(text_surf, (tx, ty))
 
     # render constellations as lines between projected constellation points
     if render_constellations:
