@@ -15,6 +15,8 @@ camera_yaw = 0.0
 
 camera_vector = np.array([0.0, 0.0, 0.0])
 
+use_concave_hull = False
+
 STAR_DISTANCE = 100.0
 
 # performance / projection parameters
@@ -145,6 +147,41 @@ else:
     fluxes = np.empty((0,))
     norm_fluxes = np.empty((0,))
 
+# Option: assign noise points (cluster_id == -1) to their nearest detected cluster centroid
+# This removes outliers for visualization. Set to False if you prefer to keep noise.
+ASSIGN_NOISE_TO_NEAREST = True
+if ASSIGN_NOISE_TO_NEAREST and len(data) > 0:
+    # build mapping from cluster -> indices (exclude -1)
+    cluster_to_indices = {}
+    for i, s in enumerate(data):
+        if s.cluster_id == -1:
+            continue
+        cluster_to_indices.setdefault(s.cluster_id, []).append(i)
+
+    # compute centroids (unit vectors) for each cluster
+    cluster_centroids = {}
+    for cid, indices in cluster_to_indices.items():
+        vecs = np.stack([data[i].unit_vector for i in indices])
+        c = vecs.sum(axis=0)
+        n = np.linalg.norm(c)
+        if n > 0:
+            cluster_centroids[cid] = c / n
+
+    # assign noise points to nearest centroid (by max dot product)
+    if len(cluster_centroids) > 0:
+        for i, s in enumerate(data):
+            if s.cluster_id != -1:
+                continue
+            best_cid = None
+            best_dot = -2.0
+            for cid, cent in cluster_centroids.items():
+                d = float(np.dot(s.unit_vector, cent))
+                if d > best_dot:
+                    best_dot = d
+                    best_cid = cid
+            if best_cid is not None:
+                s.cluster_id = int(best_cid)
+
 pg.init()
 
 screen = pg.display.set_mode((WIDTH, HEIGHT))
@@ -214,6 +251,225 @@ def render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_poi
             pass
 
 
+def compute_convex_hull(points):
+    """Compute 2D convex hull using Andrew's monotone chain algorithm.
+
+    Returns hull vertices in CCW order. Points may be a list of (x,y) tuples.
+    """
+    pts = sorted(set(points))
+    if len(pts) <= 1:
+        return pts
+
+    def cross(o, a, b):
+        return (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0])
+
+    lower = []
+    for p in pts:
+        while len(lower) >= 2 and cross(lower[-2], lower[-1], p) <= 0:
+            lower.pop()
+        lower.append(p)
+
+    upper = []
+    for p in reversed(pts):
+        while len(upper) >= 2 and cross(upper[-2], upper[-1], p) <= 0:
+            upper.pop()
+        upper.append(p)
+
+    # concatenation of lower and upper gives the hull; omit last element of each
+    hull = lower[:-1] + upper[:-1]
+    return hull
+
+
+def compute_concave_hull(points, alpha=40.0):
+    """Compute a concave hull (alpha shape) for 2D points.
+
+    This implementation attempts to use scipy.spatial.Delaunay to compute
+    a Delaunay triangulation and keeps triangle edges whose circumradius
+    is <= alpha. The boundary of the resulting set of triangles is returned
+    as one or more polygons; we pick the largest polygon by area.
+
+    If SciPy is not available or the operation fails, fall back to convex hull.
+    Alpha is in the same units as point coordinates (pixels here).
+    """
+    try:
+        from scipy.spatial import Delaunay
+    except Exception:
+        # SciPy not available: fallback
+        return compute_convex_hull(points)
+
+    pts = np.array(points, dtype=float)
+    if len(pts) <= 3:
+        return compute_convex_hull(points)
+
+    try:
+        tri = Delaunay(pts)
+    except Exception:
+        return compute_convex_hull(points)
+
+    edges = {}
+    # examine each triangle
+    for simplex in tri.simplices:
+        ia, ib, ic = simplex
+        pa = pts[ia]
+        pb = pts[ib]
+        pc = pts[ic]
+        # side lengths
+        a = math.hypot(pb[0] - pc[0], pb[1] - pc[1])
+        b = math.hypot(pa[0] - pc[0], pa[1] - pc[1])
+        c = math.hypot(pa[0] - pb[0], pa[1] - pb[1])
+        s = (a + b + c) / 2.0
+        # area via Heron's formula; guard against degenerate triangles
+        area_sq = max(s * (s - a) * (s - b) * (s - c), 0.0)
+        if area_sq <= 0:
+            continue
+        area = math.sqrt(area_sq)
+        # circumradius R = a*b*c / (4*area)
+        denom = 4.0 * area
+        if denom == 0:
+            continue
+        R = (a * b * c) / denom
+        if R <= alpha:
+            # add edges of triangle
+            tris = [(ia, ib), (ib, ic), (ic, ia)]
+            for u, v in tris:
+                if u > v:
+                    u, v = v, u
+                edges[(u, v)] = edges.get((u, v), 0) + 1
+
+    # boundary edges occur exactly once
+    boundary_edges = [e for e, cnt in edges.items() if cnt == 1]
+    if not boundary_edges:
+        return compute_convex_hull(points)
+
+    # build adjacency map from boundary edges (indices into pts)
+    adj = {}
+    for u, v in boundary_edges:
+        adj.setdefault(u, []).append(v)
+        adj.setdefault(v, []).append(u)
+
+    # extract loops by walking adjacency
+    loops = []
+    visited_edges = set()
+    for start in adj:
+        for nbr in adj[start]:
+            if (start, nbr) in visited_edges or (nbr, start) in visited_edges:
+                continue
+            loop = [start, nbr]
+            visited_edges.add((start, nbr))
+            visited_edges.add((nbr, start))
+            cur = nbr
+            prev = start
+            while True:
+                neighbors = adj.get(cur, [])
+                # pick the neighbor that's not prev
+                next_v = None
+                for t in neighbors:
+                    if t == prev:
+                        continue
+                    if (cur, t) in visited_edges or (t, cur) in visited_edges:
+                        continue
+                    next_v = t
+                    break
+                if next_v is None:
+                    break
+                loop.append(next_v)
+                visited_edges.add((cur, next_v))
+                visited_edges.add((next_v, cur))
+                prev, cur = cur, next_v
+                if cur == start:
+                    break
+            # convert indices to coordinates
+            if len(loop) >= 3:
+                loops.append([tuple(pts[i]) for i in loop])
+
+    if not loops:
+        return compute_convex_hull(points)
+
+    # pick the largest loop by absolute polygon area
+    def polygon_area(poly):
+        a = 0.0
+        for i in range(len(poly)):
+            x1, y1 = poly[i]
+            x2, y2 = poly[(i + 1) % len(poly)]
+            a += x1 * y2 - x2 * y1
+        return abs(a) * 0.5
+
+    best = max(loops, key=polygon_area)
+    return best
+
+
+def render_cluster_boundaries(screen, cluster_points_dict, padding=8, alpha=None):
+    """Draw an expanded convex-hull boundary around each cluster.
+
+    padding: pixels to expand the hull outward from its centroid.
+    """
+    for cid, pts in cluster_points_dict.items():
+        if cid == -1:
+            continue
+        if not pts or len(pts) < 2:
+            continue
+
+        if len(pts) == 2:
+            # For two points, draw a thick capsule-like rectangle/line with padding
+            a = np.array(pts[0], dtype=float)
+            b = np.array(pts[1], dtype=float)
+            mid = (a + b) / 2.0
+            vec = b - a
+            length = np.hypot(vec[0], vec[1])
+            if length < 1e-6:
+                continue
+            # perpendicular vector
+            perp = np.array([-vec[1], vec[0]]) / length
+            p1 = a + perp * padding
+            p2 = a - perp * padding
+            p3 = b - perp * padding
+            p4 = b + perp * padding
+            polygon = [tuple(p1), tuple(p2), tuple(p3), tuple(p4)]
+            color = cluster_colors.get(cid, (200, 200, 200))
+            try:
+                pg.draw.polygon(screen, color, polygon, width=2)
+            except Exception:
+                pass
+            continue
+
+        # choose concave hull if alpha specified (or default heuristic), else convex hull
+        use_alpha = alpha if alpha is not None else max(12.0, min(100.0, int(sum((math.hypot(p[0]-pts[0][0], p[1]-pts[0][1]) for p in pts))/len(pts))))
+        try:
+            hull = compute_concave_hull(pts, alpha=use_alpha)
+        except Exception:
+            hull = compute_convex_hull(pts)
+        if not hull:
+            continue
+
+        # compute centroid of hull
+        cx = sum(p[0] for p in hull) / len(hull)
+        cy = sum(p[1] for p in hull) / len(hull)
+
+        # expand polygon outward by padding pixels away from centroid
+        expanded = []
+        for x, y in hull:
+            vx = x - cx
+            vy = y - cy
+            norm = math.hypot(vx, vy)
+            if norm == 0:
+                # degenerate: keep the point
+                expanded.append((x, y))
+            else:
+                scale = (norm + padding) / norm
+                expanded.append((cx + vx * scale, cy + vy * scale))
+
+        color = cluster_colors.get(cid, (200, 200, 200))
+        try:
+            pg.draw.polygon(screen, color, expanded, width=2)
+        except Exception:
+            # fallback: draw hull edges
+            for a, b in zip(hull, hull[1:] + hull[:1]):
+                try:
+                    pg.draw.line(screen, color, a, b, 2)
+                except Exception:
+                    continue
+
+
 looking = False
 
 running = True
@@ -248,6 +504,8 @@ while running:
                 render_constellations = not render_constellations
             if event.key == pg.K_v:
                 render_custom_constellations = not render_custom_constellations
+            if event.key == pg.K_x:
+                use_concave_hull = not use_concave_hull
 
     screen.fill((0, 0, 0))
 
@@ -333,8 +591,11 @@ while running:
                     avg_y = sum(p[1] for p in cluster_points_dict[cid]) / len(cluster_points_dict[cid])
                     cluster_centers_dict[cid] = (avg_x, avg_y)
             
-            # Render overlays using dispatcher with visibility filter
-            render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_points_dict, alpha_value=40)
+            # Render overlays
+            if use_concave_hull:
+                render_cluster_boundaries(screen, cluster_points_dict)
+            else:
+                render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_points_dict, alpha_value=40)
 
     # render constellations as lines between projected constellation points
     if render_constellations:
