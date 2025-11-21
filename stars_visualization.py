@@ -1,9 +1,12 @@
 import pygame as pg
 import math
 import numpy as np
+from random import randint
 
 data = []
 constellations = []
+cluster_ids = set()
+cluster_colors = {}
 
 WIDTH, HEIGHT = 1000, 600
 
@@ -19,11 +22,11 @@ FOCAL_LENGTH = 500.0
 FPS_CAP = 60
 
 render_constellations = True
+render_custom_constellations = True
 
 class Star:
-    def __init__(self, star_number, right_ascension, declination, visual_magnitude, name):
+    def __init__(self, star_number, right_ascension, declination, visual_magnitude, name, cluster_id):
         self.star_number = int(star_number)
-        # dataset RA is in hours (0..24) — convert hours -> degrees -> radians
         self.right_ascension = math.radians(float(right_ascension))
         self.declination = math.radians(float(declination))
         self.visual_magnitude = float(visual_magnitude)
@@ -31,6 +34,8 @@ class Star:
                                 math.cos(self.declination) * math.sin(self.right_ascension),
                                 math.sin(self.declination)]) * STAR_DISTANCE
         self.name = name
+
+        self.cluster_id = int(cluster_id)
         # precompute unit direction for speed (used in vectorized projection)
         norm = np.linalg.norm(self.vector)
         if norm == 0:
@@ -87,7 +92,7 @@ class Constellation:
     def __repr__(self):
         return f"Constellation({self.name}, Points: {len(self.points)})"
 
-with open("asu_data.csv", "r") as f:
+with open("asu_clusters.csv", "r") as f:
     file_content = f.readlines()
     for i in range(1, len(file_content)):
         line = file_content[i].strip().split(",")
@@ -96,11 +101,20 @@ with open("asu_data.csv", "r") as f:
         declination = line[2]   
         visual_magnitude = line[3]
         name = line[4]
+        cluster_id = line[5]
+        cluster_ids.add(int(cluster_id))
         data.append(
-            Star(star_number, right_ascension, declination, visual_magnitude, name)
+            Star(star_number, right_ascension, declination, visual_magnitude, name, cluster_id)
         )
 
 print(f"Loaded {len(data)} stars into memory.")
+
+no_of_clusters = len(cluster_ids)-1
+print(f"Number of clusters: {no_of_clusters}")
+
+for cluster_id in cluster_ids:
+    cluster_colors[cluster_id] = (randint(0,255), randint(0,255), randint(0,255))
+cluster_colors[ -1 ] = (255, 255, 255)  # color for noise points
 
 with open("constellations.csv", "r") as f:
     file_content = f.readlines()
@@ -176,6 +190,8 @@ while running:
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_c:
                 render_constellations = not render_constellations
+            if event.key == pg.K_v:
+                render_custom_constellations = not render_custom_constellations
 
     screen.fill((0, 0, 0))
 
@@ -216,8 +232,12 @@ while running:
         ys = screen_ys[on_screen].astype(int)
 
         for xi, yi, idx in zip(xs, ys, vis_indices):
-            brightness = min(255, max(0, 255-visual_magnitudes[idx]*40))
-            pg.draw.circle(screen, (brightness, brightness, brightness), (int(xi), int(yi)), 2)
+            if render_custom_constellations:
+                color = cluster_colors[data[idx].cluster_id]
+            else:
+                brightness = min(255, max(0, 255-visual_magnitudes[idx]*40))
+                color = (brightness, brightness, brightness)
+            pg.draw.circle(screen, color, (int(xi), int(yi)), 2)
             # draw name above the star if present (cached surface)
             text_surf = name_surfaces[idx]
             if text_surf is not None:
