@@ -3,7 +3,7 @@ import math
 import numpy as np
 
 data = []
-constellations = {}
+constellations = []
 
 WIDTH, HEIGHT = 1000, 600
 
@@ -17,6 +17,8 @@ STAR_DISTANCE = 100.0
 # performance / projection parameters
 FOCAL_LENGTH = 500.0
 FPS_CAP = 60
+
+render_constellations = True
 
 class Star:
     def __init__(self, star_number, right_ascension, declination, visual_magnitude, name):
@@ -76,6 +78,14 @@ class Star:
 
     def __repr__(self):
         return f"Star({self.star_number}{self.name}, RA: {self.right_ascension}, Dec: {self.declination}, Mag: {self.visual_magnitude})"
+    
+class Constellation:
+    def __init__(self, name, points):
+        self.name = name
+        self.points = points  # list of (ra, dec) tuples
+
+    def __repr__(self):
+        return f"Constellation({self.name}, Points: {len(self.points)})"
 
 with open("asu_data.csv", "r") as f:
     file_content = f.readlines()
@@ -102,7 +112,7 @@ with open("constellations.csv", "r") as f:
             if point_str:
                 ra_str, dec_str = point_str.split(";")
                 points.append((float(ra_str), float(dec_str)))
-        constellations[name] = points
+        constellations.append(Constellation(name, points))
 
 # Build NumPy arrays once for vectorized projection
 if len(data) > 0:
@@ -161,14 +171,9 @@ while running:
             focal *= 1.1 ** event.y
             # clamp focal to reasonable range
             focal = max(300.0, min(5000.0, focal))
-        # fallback for older pygame: mouse button 4/5
-        if event.type == pg.MOUSEBUTTONDOWN:
-            if event.button == 4:  # wheel up
-                focal *= 1.1
-                focal = min(5000.0, focal)
-            elif event.button == 5:  # wheel down
-                focal /= 1.1
-                focal = max(300.0, focal)
+        if event.type == pg.KEYDOWN:
+            if event.key == pg.K_c:
+                render_constellations = not render_constellations
 
     screen.fill((0, 0, 0))
 
@@ -220,9 +225,52 @@ while running:
                 if ty + text_surf.get_height() >= 0:
                     screen.blit(text_surf, (tx, ty))
 
+    # render constellations as lines between projected constellation points
+    if render_constellations:
+        for const in constellations:
+            # project each constellation point using the same camera basis
+            proj_points = []
+            for ra_val, dec_val in const.points:
+                ra = math.radians(float(ra_val))
+                dec = math.radians(float(dec_val))
+                vec = np.array([math.cos(dec) * math.cos(ra),
+                                math.cos(dec) * math.sin(ra),
+                                math.sin(dec)]) * STAR_DISTANCE
+                # unit direction
+                vnorm = np.linalg.norm(vec)
+                if vnorm == 0:
+                    proj_points.append(None)
+                    continue
+                star_dir = vec / vnorm
+
+                forward_pt = np.dot(cam_dir, star_dir)
+                if forward_pt <= 0:
+                    proj_points.append(None)
+                    continue
+
+                xcam = np.dot(right, star_dir)
+                ycam = np.dot(up, star_dir)
+                sx = int((WIDTH / 2) + (xcam / forward_pt) * focal)
+                sy = int((HEIGHT / 2) - (ycam / forward_pt) * focal)
+                proj_points.append((sx, sy))
+
+            # draw lines between consecutive visible projected points
+            for a, b in zip(proj_points, proj_points[1:]):
+                if a is not None and b is not None:
+                    pg.draw.line(screen, (100, 150, 255), a, b, 1)
+
+            # draw constellation name near the first visible point
+            for p in proj_points:
+                if p is not None:
+                    text = font.render(const.name, True, (75, 100, 255))
+                    tx = p[0] - text.get_width() // 2
+                    ty = p[1] - text.get_height() - 6
+                    if ty + text.get_height() >= 0:
+                        screen.blit(text, (tx, ty))
+                    break
+
     pg.display.flip()
 
-    # cap FPS to reduce CPU usage when many stars are drawn
     clock.tick(FPS_CAP)
 
 pg.quit()
