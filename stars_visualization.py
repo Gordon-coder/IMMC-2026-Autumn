@@ -259,15 +259,21 @@ while running:
                 if a is not None and b is not None:
                     pg.draw.line(screen, (100, 150, 255), a, b, 1)
 
-            # draw constellation name near the first visible point
+            avg = [0,0]
+            i = 0.00001
             for p in proj_points:
-                if p is not None:
-                    text = font.render(const.name, True, (75, 100, 255))
-                    tx = p[0] - text.get_width() // 2
-                    ty = p[1] - text.get_height() - 6
-                    if ty + text.get_height() >= 0:
-                        screen.blit(text, (tx, ty))
-                    break
+                if p is None:
+                    continue
+                avg[0] += p[0]
+                avg[1] += p[1]
+                i += 1
+
+            # draw constellation name near centre of constellation
+            text = font.render(const.name, True, (75, 100, 255))
+            tx = avg[0] / i - text.get_width() // 2
+            ty = avg[1] / i
+            if ty + text.get_height() >= 0:
+                screen.blit(text, (tx, ty))
 
     pg.display.flip()
 
