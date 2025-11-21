@@ -3,6 +3,7 @@ import math
 import numpy as np
 
 data = []
+constellations = {}
 
 WIDTH, HEIGHT = 1000, 600
 
@@ -90,6 +91,18 @@ with open("asu_data.csv", "r") as f:
         )
 
 print(f"Loaded {len(data)} stars into memory.")
+
+with open("constellations.csv", "r") as f:
+    file_content = f.readlines()
+    for i in range(len(file_content)):
+        line = file_content[i].strip().split(",")
+        name = line[0].strip()
+        points = []
+        for point_str in line[1:]:
+            if point_str:
+                ra_str, dec_str = point_str.split(";")
+                points.append((float(ra_str), float(dec_str)))
+        constellations[name] = points
 
 # Build NumPy arrays once for vectorized projection
 if len(data) > 0:
