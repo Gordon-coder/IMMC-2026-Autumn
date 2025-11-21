@@ -158,6 +158,53 @@ clock = pg.time.Clock()
 # current focal length (zoom). Use a variable so the mouse wheel can change it.
 focal = FOCAL_LENGTH
 
+def render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_points_dict, alpha_value=40):
+    """Render radial gradient halos around each cluster centroid.
+    
+    Creates a soft, glowing background that emphasizes cluster centers.
+    More visually subtle than polygons.
+    
+    Args:
+        screen: pygame surface
+        cluster_centers_dict: dict {cluster_id: (center_x, center_y)}
+        cluster_points_dict: dict {cluster_id: [(x, y), ...]}
+        alpha_value: max alpha for the gradient
+    """
+    for cluster_id, center in cluster_centers_dict.items():
+        if cluster_id == -1:
+            continue  # skip noise
+        if cluster_id not in cluster_points_dict or len(cluster_points_dict[cluster_id]) < 1:
+            continue
+        
+        points = cluster_points_dict[cluster_id]
+        # compute max distance from center to any point in cluster
+        max_dist = 0
+        for px, py in points:
+            dist = math.hypot(px - center[0], py - center[1])
+            max_dist = max(max_dist, dist)
+        
+        if max_dist < 5:
+            max_dist = 50  # minimum halo size
+        
+        color = cluster_colors.get(cluster_id, (100, 100, 100))
+        # create a temporary surface for the gradient
+        halo_size = int(max_dist * 2.5)
+        halo_surf = pg.Surface((halo_size, halo_size), flags=pg.SRCALPHA)
+        
+        # draw concentric circles with fading alpha
+        for r in range(halo_size // 2, 0, -2):
+            # alpha decreases with radius
+            alpha = max(0, alpha_value * (1 - (r / (halo_size // 2))))
+            c = tuple(int(x) for x in color)
+            pg.draw.circle(halo_surf, c + (int(alpha),), (halo_size // 2, halo_size // 2), r)
+        
+        # blit the halo to screen
+        try:
+            screen.blit(halo_surf, (int(center[0] - halo_size // 2), int(center[1] - halo_size // 2)))
+        except Exception:
+            pass
+
+
 looking = False
 
 running = True
@@ -230,6 +277,29 @@ while running:
         vis_indices = np.nonzero(vis_mask)[0][on_screen]
         xs = screen_xs[on_screen].astype(int)
         ys = screen_ys[on_screen].astype(int)
+
+        # Render cluster backgrounds using the selected method before drawing stars
+        if render_custom_constellations:
+            cluster_points_dict = {}
+            cluster_centers_dict = {}
+            
+            # Collect points and centers for each cluster, only from visible (front-facing) stars
+            for xi, yi, idx in zip(xs, ys, vis_indices):
+                cluster_id = data[idx].cluster_id
+                if cluster_id not in cluster_points_dict:
+                    cluster_points_dict[cluster_id] = []
+                    cluster_centers_dict[cluster_id] = [0, 0]
+                cluster_points_dict[cluster_id].append((xi, yi))
+            
+            # Compute centers
+            for cid in cluster_centers_dict:
+                if len(cluster_points_dict[cid]) > 0:
+                    avg_x = sum(p[0] for p in cluster_points_dict[cid]) / len(cluster_points_dict[cid])
+                    avg_y = sum(p[1] for p in cluster_points_dict[cid]) / len(cluster_points_dict[cid])
+                    cluster_centers_dict[cid] = (avg_x, avg_y)
+            
+            # Render overlays using dispatcher with visibility filter
+            render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_points_dict, alpha_value=40)
 
         for xi, yi, idx in zip(xs, ys, vis_indices):
             if render_custom_constellations:
