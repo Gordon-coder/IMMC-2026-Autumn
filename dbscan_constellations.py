@@ -126,16 +126,15 @@ def dbscan_on_sphere(
         neighbor_indices = np.nonzero(dots >= cos_eps)[0]
 
         # Decide core-ness: either by count (min_samples) or by neighbor flux sum
-        is_core = False
-        if fluxes is None or min_total_weight <= 0.0:
-            # fall back to classic DBSCAN core test by neighbor count
-            if neighbor_indices.size >= min_samples:
-                is_core = True
-        else:
+        is_core = True
+        # fall back to classic DBSCAN core test by neighbor count
+        if neighbor_indices.size < min_samples:
+            is_core = False
+        elif fluxes is not None and min_total_weight > 0.0:
             # weighted core test: sum fluxes of neighbors
             neighbor_flux_sum = float(fluxes[neighbor_indices].sum())
-            if neighbor_flux_sum >= float(min_total_weight):
-                is_core = True
+            if neighbor_flux_sum < float(min_total_weight):
+                is_core = False
 
         if not is_core:
             # mark as noise (labels already -1)
@@ -157,14 +156,13 @@ def dbscan_on_sphere(
                 neighbor_neighbors = np.nonzero(dots_n >= cos_eps)[0]
                 # Determine if this neighbor is itself a core point using the
                 # same rule we used above (count or weighted sum).
-                neighbor_is_core = False
-                if fluxes is None or min_total_weight <= 0.0:
-                    if neighbor_neighbors.size >= min_samples:
-                        neighbor_is_core = True
-                else:
+                neighbor_is_core = True
+                if neighbor_neighbors.size < min_samples:
+                    neighbor_is_core = False
+                elif fluxes is not None and min_total_weight > 0.0:
                     neighbor_neighbors_flux_sum = float(fluxes[neighbor_neighbors].sum())
-                    if neighbor_neighbors_flux_sum >= float(min_total_weight):
-                        neighbor_is_core = True
+                    if neighbor_neighbors_flux_sum < float(min_total_weight):
+                        neighbor_is_core = False
 
                 if neighbor_is_core:
                     # add newly found neighbors to the queue if they are unlabeled
