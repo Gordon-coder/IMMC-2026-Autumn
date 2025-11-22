@@ -17,8 +17,6 @@ camera_vector = np.array([0.0, 0.0, 0.0])
 
 use_concave_hull = False
 
-STAR_DISTANCE = 100.0
-
 # performance / projection parameters
 FOCAL_LENGTH = 500.0
 FPS_CAP = 60
@@ -34,7 +32,7 @@ class Star:
         self.visual_magnitude = float(visual_magnitude)
         self.vector = np.array([math.cos(self.declination) * math.cos(self.right_ascension),
                                 math.cos(self.declination) * math.sin(self.right_ascension),
-                                math.sin(self.declination)]) * STAR_DISTANCE
+                                math.sin(self.declination)])
         self.name = name
 
         self.cluster_id = int(cluster_id)
@@ -607,7 +605,7 @@ while running:
                 dec = math.radians(float(dec_val))
                 vec = np.array([math.cos(dec) * math.cos(ra),
                                 math.cos(dec) * math.sin(ra),
-                                math.sin(dec)]) * STAR_DISTANCE
+                                math.sin(dec)])
                 # unit direction
                 vnorm = np.linalg.norm(vec)
                 if vnorm == 0:
