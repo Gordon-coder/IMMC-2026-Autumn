@@ -1,6 +1,7 @@
 # Dependencies:
 pygame
 numpy
+matplotlib
 
 To install all the dependancies, run:
 <details>
@@ -10,7 +11,7 @@ To install all the dependancies, run:
 ```bash
 python3 -m venv .venv
 ./.venv/bin/activate
-pip install pygame numpy
+pip install pygame numpy matplotlib
 ```
 
 </details>
