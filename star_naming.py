@@ -22,6 +22,9 @@ with open("asu_clusters.csv", "r") as f:
             }
         )
 
+no_of_clusters = len(data.keys())
+print(f"Total clusters: {no_of_clusters}")
+
 api_key = None
 with open(".env", "r") as f:
     file_content = f.readlines()
@@ -66,12 +69,14 @@ def recognise_cluster_patterns(cluster_data):
 
 cluster_names = {}
 
+i = 0
 for cluster_id, stars in data.items():
     analysis = recognise_cluster_patterns(stars)
-    print(f"Cluster ID: {cluster_id}")
-    print(analysis)
+    
+    print(f"{i}/{no_of_clusters}% done, generated {i} cluster names")
 
     cluster_names[cluster_id] = analysis
+    i = i + 1
 
 with open("cluster_names.json", "w") as f:
     json.dump(cluster_names, f, indent=4)
