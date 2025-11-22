@@ -1,0 +1,434 @@
+{
+    "0": {
+        "name": "The Equatorial Stretch",
+        "reasoning": "This cluster spans a wide range of right ascension from about 1.29 to 70.84 degrees and 298.4 to 1.28 degrees (wrapping around 360), with declinations mostly between 40 and 70 degrees, showing a broad, elongated spatial distribution along the celestial equator, and includes stars of varying brightness with no extreme concentrations."
+    },
+    "2": {
+        "name": "Southern Zenith Halo",
+        "reasoning": "The cluster is situated in the southern celestial hemisphere with declinations around -6 to -12 degrees, forming a loose, halo-like distribution around right ascension 0 to 5 degrees. It features a mix of bright stars, including one with a notably low visual magnitude of 3.56, contributing to its prominence."
+    },
+    "1": {
+        "name": "Celestial Corona",
+        "reasoning": "The cluster exhibits a ring-like spatial distribution in right ascension (approximately 0-16 degrees and 357-360 degrees), wrapping around the celestial sphere, with a concentration of stars near declination 27-33 degrees. It features a mix of bright stars, including several with visual magnitudes below 5, such as 2.06, 3.27, 4.36, and 4.37, interspersed with fainter ones, creating a luminous, crown-like pattern."
+    },
+    "3": {
+        "name": "Northern Bifurcation Cluster",
+        "reasoning": "This cluster is split into two distinct groupings in right ascension (RA): one around 0-20 degrees and another from 316 to 358 degrees, suggesting a bifurcated structure. Stars are concentrated at high declinations (70-80 degrees), indicating a northern celestial location. The visual magnitudes range from 3.21 to 6.76, with a notably bright star at magnitude 3.21, but overall, the cluster lacks extreme density, focusing on spatial separation."
+    },
+    "5": {
+        "name": "Scattered Southern Radiance",
+        "reasoning": "The cluster spans a wide range in right ascension (0.08 to 16.52 degrees) and declination (-50.99 to -38.42 degrees), indicating a scattered spatial distribution. The visual magnitudes range from 2.39 (very bright) to 6.9 (dimmer), with a mix of bright and dim stars, giving it a varied radiance. Located in the southern celestial hemisphere, the name reflects its dispersed nature and luminosity diversity."
+    },
+    "7": {
+        "name": "Scattered Radiance",
+        "reasoning": "The cluster has a spread-out spatial distribution in right ascension and declination, with stars ranging widely in brightness (visual magnitudes 2.83 to 6.56), featuring several bright stars that stand out amidst a scattered arrangement, giving an impression of dispersed luminosity."
+    },
+    "4": {
+        "name": "Celestial Belt of Modest Luminaries",
+        "reasoning": "The cluster is loosely distributed across the entire right ascension range (0-360 degrees) with a concentrated declination band around -75 to -82 degrees, resembling a belt-like structure. The majority of stars have visual magnitudes between 5 and 7, indicating moderate brightness without exceptionally bright members, making it a group of modest luminaries."
+    },
+    "6": {
+        "name": "Southern Halo Ring",
+        "reasoning": "The cluster spans a wide range in right ascension from 5.02 to 359.98 degrees, indicating it wraps around the celestial sphere with a concentration in the southern hemisphere (declinations around -59 to -65 degrees). Most stars have visual magnitudes between 4.23 and 6.59, making them moderately bright and relatively uniform, with no extremely faint outliers. The distribution suggests a loose, ring-like structure in the southern sky, hence the descriptive and creative name."
+    },
+    "8": {
+        "name": "Scattered Siren's Glimmer",
+        "reasoning": "This cluster has a dispersed spatial distribution with stars spread over a wide declination range from -24.78 to -12.01 degrees and a notable brightness disparity, including one exceptionally bright star (vm 2.04) amidst others of moderate magnitude (5.24-6.49), resembling a faint, scattered glow with a single prominent beacon."
+    },
+    "9": {
+        "name": "The Sparse Zenith",
+        "reasoning": "This cluster spans a wide range in right ascension (9.34 to 23.57 degrees) and declination (28.53 to 41.34 degrees), resulting in a sparse spatial distribution. It includes one notably bright star with a visual magnitude of 2.06, which is significantly brighter than the others (mostly around 4-6 magnitudes), suggesting a prominent, zenith-like feature amidst the scattered stars."
+    },
+    "12": {
+        "name": "Celestial Meridian Arc",
+        "reasoning": "This cluster spans nearly the full 360 degrees in right ascension with high declination values (82-89 degrees), forming a wide, arc-like distribution near the celestial pole. Most stars have visual magnitudes between 4 and 7, with a few brighter ones like vm=2.02 and several around vm=4-5, indicating moderate brightness and notable visibility in the night sky, resembling a great circle or meridian arc across the heavens."
+    },
+    "11": {
+        "name": "The Binary Beacon Arc",
+        "reasoning": "This cluster features a prominent pair of stars at identical coordinates (16.42 RA, 21.47 DEC) with similar brightness (vm 5.34 and 5.56), creating a binary-like anchor point. The stars form a broad arc-like distribution across declination 19-27 degrees with several moderately bright stars (vm 4.06-6.54), giving the impression of a celestial arc anchored by this distinctive binary feature."
+    },
+    "13": {
+        "name": "Southern Stellar Stream",
+        "reasoning": "The stars in this cluster are widely distributed in right ascension (approximately 10.84 to 30.43 degrees) and declination (approximately -60.86 to -41.49 degrees), with a notable concentration in the southern celestial hemisphere and a linear-like spatial arrangement suggesting a stream. Visual magnitudes range from very bright (0.46) to dim (6.84), with several bright stars (e.g., magnitudes below 4) interspersed, indicating a mix of luminosities. The name reflects the elongated, flowing distribution and southern location."
+    },
+    "10": {
+        "name": "Equatorial String",
+        "reasoning": "The stars are loosely distributed along a roughly horizontal band in right ascension (ra) from 11.05 to 21.71 degrees, with declination (dec) values concentrated between -14.6 and -6.91 degrees. The visual magnitudes range from 3.45 to 6.4, with one notably bright star (vm 3.45), but overall the cluster lacks high density or uniform brightness, resembling a scattered, elongated string in the equatorial region."
+    },
+    "14": {
+        "name": "Southern Sparsity",
+        "reasoning": "The cluster has a low density with only 9 stars spread across a wide range in right ascension (21.01 to 27.86 degrees) and declination (-11.32 to -7.03 degrees). It features a mix of bright and dim stars (visual magnitudes from 3.6 to 6.59) but lacks a concentrated core, making it appear sparse and spread out in the southern celestial hemisphere."
+    },
+    "15": {
+        "name": "Glittering Scatter",
+        "reasoning": "The cluster spans a wide range in right ascension (21.56\u00b0 to 37.31\u00b0) and declination (14.66\u00b0 to 27.8\u00b0), indicating a dispersed spatial distribution with no clear central concentration. Despite the spread, it contains notable bright stars, including one with visual magnitude 2.0 (exceptionally bright) and another at 2.64, which stand out prominently amidst stars generally ranging from 4.75 to 6.55 in magnitude. The name 'Glittering Scatter' captures the combination of scattered arrangement and the presence of these glittering, bright stars that dominate the cluster's brightness profile."
+    },
+    "16": {
+        "name": "The Southern Flicker",
+        "reasoning": "This cluster spans a wide range in right ascension (21.27 to 76.89 degrees) and declination (-69.62 to -55.05 degrees), indicating a diffuse and elongated structure in the southern celestial hemisphere. The visual magnitudes range from 2.86 (fairly bright) to 6.75 (fainter), with several stars of moderate brightness (e.g., magnitudes around 4-5) scattered throughout, creating a pattern reminiscent of a flickering light across the sky. The name captures the cluster's expansive spread and mixed luminosity characteristics."
+    },
+    "17": {
+        "name": "Celestial Scatter",
+        "reasoning": "The cluster shows a wide dispersion in right ascension (approximately 30.8 to 56.54 degrees) and declination (approximately -6.42 to 15.43 degrees), indicating low spatial density and no tight grouping. Stars are spread out over a large area with varying visual magnitudes (from 2.53 to 6.5), lacking a central concentration or a distinct bright core, suggesting a scattered, unbound collection rather than a compact cluster."
+    },
+    "18": {
+        "name": "Southern Bright Crescent",
+        "reasoning": "The cluster exhibits a semi-circular spatial distribution in the southern hemisphere with declinations around -50 to -54 degrees, and includes multiple bright stars with visual magnitudes as low as 3.56, forming a distinctive curved pattern."
+    },
+    "20": {
+        "name": "Southern Luminosity Web",
+        "reasoning": "The cluster spans approximately 12.48 degrees in RA and 8.31 degrees in Dec, forming a loose, web-like spatial distribution that suggests a non-compact grouping. It features two notably bright stars with visual magnitudes of 3.24 and 4.11, which stand out as focal points among fainter members, creating a pattern of scattered luminosity across the southern celestial region."
+    },
+    "19": {
+        "name": "Scattered Luminaries",
+        "reasoning": "The cluster exhibits a dispersed spatial distribution with right ascension spanning approximately 5.4 degrees and declination around 8 degrees, indicating low density. It includes several bright stars with visual magnitudes ranging from 4.66 to 7.09, featuring a notably bright star at magnitude 4.66. The name reflects the combination of scattered arrangement and prominent brightness."
+    },
+    "21": {
+        "name": "Sparse Drift Assembly",
+        "reasoning": "The cluster has a wide range in right ascension (approximately 11.17 degrees) and declination (approximately 6.03 degrees), indicating a sparse and elongated spatial distribution. The visual magnitudes are mostly in the 4-6 range, with a few moderately bright stars (e.g., 4.35, 4.63), but no exceptionally bright ones, suggesting an average overall brightness. This combination of sparseness and gradual drift in position gives a sense of a loosely assembled group drifting across the sky."
+    },
+    "22": {
+        "name": "Scattered Brights",
+        "reasoning": "The cluster spans a wide range in right ascension (41.98 to 50.09 degrees) and declination (25.26 to 31.93 degrees), indicating a scattered spatial distribution. It contains several bright stars with visual magnitudes between 3.63 and 4.51, contributing to its overall brightness, while the rest are moderately dim, creating a mix that emphasizes the scattered bright members."
+    },
+    "23": {
+        "name": "Southern Arc Clasp",
+        "reasoning": "The stars form a loosely distributed cluster spanning right ascension from 44.11 to 49.15 degrees and declination from approximately -9.15 to -2.78 degrees, with visual magnitudes between 3.89 and 6.19. The stars are moderately bright and arranged in a gentle arc-like pattern in the southern celestial hemisphere, resembling a clasp in shape and cohesion."
+    },
+    "24": {
+        "name": "Scattered Radiance Array",
+        "reasoning": "The cluster spans a wide range in right ascension (44.35 to 57.15 degrees) and declination (-29.8 to -18.56 degrees), indicating a loose, scattered spatial distribution. It includes several bright stars with visual magnitudes below 5.0, such as 3.69, 3.87, 4.09, and 4.27, contributing to notable brightness amidst fainter stars. The name reflects the combination of dispersed arrangement and prominent luminosity."
+    },
+    "26": {
+        "name": "Scattered Radiance Expanse",
+        "reasoning": "This cluster covers a vast RA range (50\u2013295\u00b0) with widely scattered declination (-85\u00b0 to +55\u00b0), indicating a sparse, expansive distribution. The stars are predominantly of moderate brightness (visual magnitudes mostly 4\u20136), with a few bright outliers, creating a dispersed, luminous pattern across the sky rather than a dense core, suggesting a loosely bound or background stellar group."
+    },
+    "25": {
+        "name": "Stellar Cascade",
+        "reasoning": "The cluster spans a wide range in right ascension and declination, forming a flowing, elongated distribution. It features several bright stars with low visual magnitudes (e.g., 2.95, 3.54) amidst fainter ones, creating a cascading effect in brightness and spatial arrangement."
+    },
+    "27": {
+        "name": "Southern Glimmer Spiral",
+        "reasoning": "The cluster exhibits a wide spatial spread in right ascension (51.48 to 58.6 degrees) and declination (-40.66 to -34.73 degrees), suggesting a loose, spiral-like distribution. Stars with visual magnitudes from 4.17 to 6.86 indicate varying brightness levels, with several bright stars (vm < 5) contributing to a shimmering effect, typical of southern hemisphere clusters."
+    },
+    "28": {
+        "name": "Eridanus Luminance Array",
+        "reasoning": "The cluster spans approximately 7 degrees in right ascension and 6.5 degrees in declination with a moderately dense distribution, featuring several bright stars of visual magnitude 4-5 (e.g., 4.04, 4.43, 4.87) that stand out among fainter companions, creating a balanced luminance pattern. Its location in the southern celestial hemisphere, near declinations around -7 degrees, aligns with the Eridanus constellation, evoking its river-like star arrangement."
+    },
+    "29": {
+        "name": "Celestial River of Light",
+        "reasoning": "The stars in this cluster form an elongated, meandering pattern in right ascension from 88.07 to 108.98 degrees, with declination mostly between 53.3 and 61.52 degrees, resembling a flowing river in the sky. Despite the spread, there are concentrated bright stars, such as those with visual magnitudes around 4.35 to 4.98, creating a luminous path that guides the eye through the cluster like a stream of light."
+    },
+    "30": {
+        "name": "Gemini's Luminous Spine",
+        "reasoning": "The cluster spans a narrow range in right ascension (approximately 15 degrees) with a wide spread in declination (from -1.91 to 17.67 degrees), creating an elongated, spine-like spatial distribution reminiscent of the Gemini constellation shape. It features a mix of brightness levels, including several bright stars (e.g., vm of 0.38, 2.90, 4.32), contributing to a luminous appearance and highlighting the cluster's variability."
+    },
+    "31": {
+        "name": "The Celestial Fan",
+        "reasoning": "The cluster spans a wide range in right ascension (108-118 degrees) but remains concentrated in declination (-16 to -8 degrees), creating a fan-shaped spatial distribution. With mostly similar visual magnitudes (4-7 range) and one notably bright star at 3.93 magnitude, the arrangement forms a visually cohesive, fan-like pattern across the sky."
+    },
+    "33": {
+        "name": "The Draco String",
+        "reasoning": "The stars form an elongated, string-like distribution stretching approximately 26 degrees in right ascension (from 120.34\u00b0 to 146.48\u00b0) with moderate spread in declination (57.74\u00b0 to 69.83\u00b0). Visual magnitudes range from 3.36 to 6.48, indicating a mix of moderately bright stars with no extreme outliers, and the cluster lacks dense central concentration, instead appearing as a loose linear arrangement reminiscent of a celestial string of pearls in the Draco constellation region."
+    },
+    "32": {
+        "name": "Celestial Arc Trail",
+        "reasoning": "The cluster exhibits a spatially elongated distribution in right ascension from 124.13 to 138.59 degrees, with declinations spanning approximately 1.46 to 13.26 degrees, creating an arc-like pattern. It contains a mix of bright stars (e.g., visual magnitudes around 3.11 to 4.97) and dimmer ones, contributing to a scattered luminosity profile. The name reflects the elongated, trail-like spatial arrangement and the diverse brightness levels observed."
+    },
+    "34": {
+        "name": "The Bright Arc Span",
+        "reasoning": "The cluster spans a wide range in right ascension (125.63-132.34 degrees) and declination (-7.98 to -1.9 degrees), with a notable bright star of visual magnitude 3.9, forming an arced pattern that is one of the most luminous in the group."
+    },
+    "35": {
+        "name": "The Scattered Beacon Assembly",
+        "reasoning": "The cluster spans a wide range in right ascension (126.9 to 151.29 degrees) and declination (40.2 to 57.42 degrees), indicating a sparse and dispersed spatial distribution. Notable bright stars with visual magnitudes around 3.14 and 3.17 act as prominent beacons, while the majority are moderately bright (magnitudes 4-6), creating an irregular, scattered pattern with isolated points of high luminosity."
+    },
+    "36": {
+        "name": "Scattered Radiance Nebula",
+        "reasoning": "The cluster spans a wide right ascension range (130.08 to 145.68 degrees) and declination range (27.9 to 40.24 degrees), indicating a loose, scattered spatial distribution. Notable bright stars with visual magnitudes of 3.13, 3.82, and 4.02 stand out among generally fainter stars, creating pockets of radiance. This combination of dispersal and intermittent brightness suggests a diffuse yet luminous grouping."
+    },
+    "37": {
+        "name": "Scattered Radiance Archipelago",
+        "reasoning": "The cluster exhibits a wide spatial distribution across right ascension (137-145 degrees) and declination (-16 to -1 degrees), with a notable concentration of moderately bright stars (visual magnitudes 4.6-6.62) and one exceptionally bright star (vm 1.98), creating a scattered yet luminous pattern reminiscent of an archipelago of radiant islands in the sky."
+    },
+    "38": {
+        "name": "Golden Archipelago",
+        "reasoning": "The cluster spans approximately 10 degrees in right ascension and 8 degrees in declination, forming a wide, arch-like structure from southeast to northwest. It contains several moderately bright stars (visual magnitudes 2.98 to 6.53), with the brightest (vm 2.98) centrally located, resembling a chain of luminous islands in a celestial sea."
+    },
+    "39": {
+        "name": "The Celestial Pathfinder",
+        "reasoning": "The cluster spans a wide range in right ascension (approximately 142 to 158 degrees) and declination (approximately 6 to 27 degrees), indicating an elongated, path-like spatial distribution. Notable features include several bright stars with visual magnitudes below 4.0, such as a very bright star at magnitude 1.35, which adds brilliance and guides the eye along the path, while the overall spread suggests a guiding or exploratory theme."
+    },
+    "40": {
+        "name": "The Serpent's Spine Cluster",
+        "reasoning": "The stars form an elongated, linear pattern in right ascension from approximately 147.87\u00b0 to 154.82\u00b0, resembling a winding spine. Declination values range from -7.32\u00b0 to -15.61\u00b0, creating a narrow, sinuous structure. Visual magnitudes vary from 3.61 (brightest) to 6.53 (faintest), with an average magnitude around 5.5, indicating moderate overall brightness. The spatial distribution suggests a loose, elongated cluster rather than a dense, spherical one, evoking the image of a serpent's backbone in the sky."
+    },
+    "41": {
+        "name": "Vela's Beacon Cluster",
+        "reasoning": "The cluster features a very bright star at vm 3.05 and another at vm 3.45, making them prominent beacons amidst fainter companions. Stars are distributed across a wide range of declinations (36.33 to 48.78) and right ascensions (149.42 to 159.78), indicating an elongated, sail-like formation reminiscent of the constellation Vela. The combination of high brightness contrast and spatial spread suggests a guiding or beacon-like quality in the celestial expanse."
+    },
+    "42": {
+        "name": "Southern Crossroads Nebula",
+        "reasoning": "The cluster spans a notable range in right ascension (151.1 to 159.71 degrees) and declination (-44.62 to -38.01 degrees), forming a dispersed, cross-like spatial pattern in the southern celestial hemisphere. It features a mix of bright stars, including one with a very low visual magnitude of 3.85, indicating high brightness, while others are moderately bright, creating a varied luminosity profile."
+    },
+    "43": {
+        "name": "The Luminous Bridge",
+        "reasoning": "The cluster exhibits a wide spatial distribution in right ascension (153.78 to 217.16 degrees) and declination (45.75 to 69.08 degrees), forming a dispersed, elongated structure. It contains several exceptionally bright stars with very low visual magnitudes (e.g., 1.77, 1.79, 1.86), interspersed among numerous fainter stars, creating a pattern of scattered brilliance. The name reflects the elongated shape and the presence of these bright stars that act as beacons across the cluster."
+    },
+    "44": {
+        "name": "Scattered Luminaries of Scorpius",
+        "reasoning": "The cluster spans a wide range in right ascension (155.28\u00b0 to 168.13\u00b0) and declination (-20.66\u00b0 to -10.58\u00b0), indicating a scattered spatial distribution with no dense concentration. It includes several bright stars, such as one with visual magnitude 3.11 and others around 4, amidst many fainter ones, creating a mix of luminosities. The overall pattern suggests a loose grouping in the Scorpius constellation region, hence the name reflects its dispersed nature and varying brightness."
+    },
+    "45": {
+        "name": "Tight Triad Crescent",
+        "reasoning": "The cluster has a tight grouping of three bright stars (vm ~4.7) within a narrow range of right ascension (155.78 to 156.48) and declination (33.72 to 33.91), forming a core triad, while the remaining stars spread out in a gentle crescent-like distribution from RA 157.96 to 162.24, with overall moderate to high brightness."
+    },
+    "46": {
+        "name": "Crescent Cascade",
+        "reasoning": "The cluster's stars form a pronounced crescent shape in the sky, with right ascension increasing from approximately 160.9 to 174.7 degrees and declination generally decreasing from around 46.7 to 39.3 degrees, creating a cascading spatial distribution. The visual magnitudes range from 3.01 to 6.44, indicating a mix of bright and faint stars, with the brightest star (vm 3.01) situated centrally, adding to the cascade effect."
+    },
+    "47": {
+        "name": "Halo of Hercules",
+        "reasoning": "This cluster spans a right ascension from 161.6 to 168.8 degrees and declination from 18.89 to 25.5 degrees, forming a broad, loosely grouped arrangement. It includes stars of varying brightness, notably one with a visual magnitude of 2.56, making it the brightest, contributing to a dispersed yet luminous appearance reminiscent of a halo in the constellation region near Hercules, where such declinations are common."
+    },
+    "48": {
+        "name": "Stellar Crescent",
+        "reasoning": "The stars form a distinct curved pattern in right ascension and declination coordinates, resembling a crescent shape. There is a notable brightness gradient with the brightest stars (vm 3.48-3.83) anchoring the ends of the arc, while intermediate magnitude stars (vm 4.78-5.74) fill the central portion, creating a visually striking curved arrangement in the sky."
+    },
+    "49": {
+        "name": "Northern Comet's Tail",
+        "reasoning": "The cluster's right ascension increases steadily from ~168 to ~173 degrees, while declination decreases from ~16.5 to ~11 degrees, forming a linear, tail-like spatial pattern. It includes stars of notably high brightness (vm ~3.34), enhancing the celestial contrast, and the overall configuration resembles a comet's tail sweeping northward in the sky."
+    },
+    "50": {
+        "name": "Scattered Beacon Cluster",
+        "reasoning": "The cluster exhibits a broad spatial distribution with right ascension ranging from 169.3 to 179.27 degrees and declination from -38.01 to -26.75 degrees, indicating low density. It includes stars with notable brightness variations, such as a bright star with visual magnitude 3.54 and several others below 5.0, giving it prominent beacons, but the overall group is loosely spread rather than compact."
+    },
+    "51": {
+        "name": "Northern Beacon Assembly",
+        "reasoning": "The cluster features a wide declination range from 8.44 to 20.22 degrees, suggesting a north-south elongated distribution, with one exceptionally bright star (visual magnitude 2.14) that stands out as a beacon among dimmer stars."
+    },
+    "52": {
+        "name": "Scattered Guardians of the Southern Sky",
+        "reasoning": "This cluster exhibits a wide spatial distribution with stars spanning approximately 15 degrees in right ascension and 20 degrees in declination, indicating low density. The visual magnitudes range from 2.59 to 6.62, with several bright stars (vm < 3) like those at ra:182.53, dec:-22.62 (vm:3.0) and ra:188.6, dec:-23.4 (vm:2.65), giving the impression of scattered bright 'guardians' in the southern celestial hemisphere. The name reflects the dispersed nature and notable brightness variations within the cluster."
+    },
+    "53": {
+        "name": "The Luminous Arc Stream",
+        "reasoning": "The stars in this cluster are distributed in a linear, arc-like formation spanning approximately 11 degrees in right ascension and 10 degrees in declination, with a notable concentration of bright stars (visual magnitudes predominantly between 4.36 and 5.87, including several below 5.0). This combination of high brightness and elongated spatial arrangement suggests a distinctive, luminous stream of stars."
+    },
+    "54": {
+        "name": "Northern Compact Brightness Cluster",
+        "reasoning": "The cluster spans approximately 16.36 degrees in right ascension and 8.58 degrees in declination, with stars concentrated in the northern celestial hemisphere, particularly around declination 35-42 degrees. It features a mix of bright stars, including one notably bright star with a visual magnitude of 2.9, and overall magnitudes ranging from 2.9 to 6.47, indicating a combination of high and moderate brightness. The name reflects the compact spatial distribution and the presence of bright stars in the northern region."
+    },
+    "55": {
+        "name": "Celestial River",
+        "reasoning": "The stars form a loose, elongated distribution stretching approximately 14 degrees in right ascension and 11 degrees in declination, resembling a meandering river across the sky. This pattern, combined with a mix of bright (vm ~2.83-4.88) and faint stars, gives the cluster a flowing, scattered appearance rather than a dense core."
+    },
+    "60": {
+        "name": "Southern Celestial Arc",
+        "reasoning": "The cluster spans a significant range in right ascension (193.74 to 235.82 degrees) while maintaining a tight declination range around -85 to -76 degrees, forming a curved arc-like pattern in the southern celestial hemisphere. The stars exhibit consistent visual magnitudes primarily between 4.32 and 6.47, indicating moderate brightness with one notably bright star at 4.32 magnitude, contributing to the arc's distinct linear spatial distribution."
+    },
+    "57": {
+        "name": "The Sprawling Archipelago",
+        "reasoning": "The cluster exhibits a wide spatial spread in right ascension (193.59 to 206.81 degrees) and declination (-16.18 to -6.26 degrees), with stars loosely grouped, resembling scattered islands rather than a dense core. It contains one exceptionally bright star (vm 0.98) amidst predominantly dimmer ones (vm around 4-6), adding a focal point to the dispersed arrangement."
+    },
+    "56": {
+        "name": "Radiant Scythe Cluster",
+        "reasoning": "The cluster's right ascension spans approximately 8.5 degrees (194.39 to 203.01), while the declination spans about 10.4 degrees (-26.55 to -16.2), indicating an elongated, crescent-like shape in spatial distribution. Stars with notably high brightness (e.g., vm 3.0 at ra 199.73, dec -23.17) are concentrated, forming a radiant arc. The combination of elongation and bright stars suggests a scythe or sickle shape, leading to this descriptive name."
+    },
+    "59": {
+        "name": "Northern Paragon Cluster",
+        "reasoning": "This cluster is densely populated with stars at high declinations, predominantly between 65\u00b0 and 80\u00b0, indicating a northern celestial concentration. It features a mix of bright stars, including a notably bright star with a visual magnitude of 2.08, and a general visual magnitude range from 2.08 to 6.57, suggesting a diverse brightness profile. The spatial distribution shows a compact grouping, particularly in the latter half of the data, with tight clustering in right ascension and declination. The name reflects its northern location and the presence of standout bright stars amidst a dense arrangement."
+    },
+    "58": {
+        "name": "Jeweled Crescent",
+        "reasoning": "The cluster spans a wide range in right ascension (204.53 to 218.14 degrees) and declination (12.17 to 25.09 degrees) with stars distributed in a curved, non-uniform pattern, resembling a crescent shape. It includes stars of varying brightness, notably one with a visual magnitude of -0.04, indicating exceptional brightness like a jewel, amidst others ranging from 2.68 to 6.52, creating a sparkling effect."
+    },
+    "61": {
+        "name": "Crescent Nebula Cluster",
+        "reasoning": "The stars form a curved spatial distribution in right ascension, resembling a crescent shape, with a mix of moderately bright stars and one notably bright star (vm 3.03) at the center of the arc, enhancing its prominence."
+    },
+    "62": {
+        "name": "The Bright Arc Cascade",
+        "reasoning": "This cluster spans a wide range in right ascension (215.04 to 226.83 degrees) and declination (21.12 to 32.79 degrees), forming a loose, arc-like distribution with notable bright stars, including one with a visual magnitude of 2.7 and several others around 4.0-5.0, creating a cascading effect of brightness across the spatial spread."
+    },
+    "68": {
+        "name": "Southern Sparse Arc",
+        "reasoning": "The stars in this cluster are spread over a wide right ascension range (217.4 to 250.77 degrees) but maintain a consistent declination near -77 degrees, forming a loose arc-like distribution in the southern celestial hemisphere. The visual magnitudes range from moderately bright (3.83) to dimmer (6.2), with no extremely bright stars, indicating a sparse and elongated grouping."
+    },
+    "64": {
+        "name": "Scattered Glimmers of the Serpent's Tail",
+        "reasoning": "The cluster features a wide spread in right ascension (219.25 to 230.26) and declination (-19.79 to -11.14), indicating low density and a scattered spatial distribution. Visual magnitudes range from 2.75 to 6.6, with several moderately bright stars and one notably bright star (vm=2.75), creating a pattern of glimmering points. The stars are loosely grouped, resembling a serpentine tail sweeping across the sky, hence the descriptive and imaginative name."
+    },
+    "63": {
+        "name": "The Southern Celestial Alignment",
+        "reasoning": "The stars in this cluster exhibit a tight spatial grouping with right ascension ranging from approximately 219.56 to 224.3 degrees and declination from 13.53 to 19.15 degrees, indicating high density in a compact region. The visual magnitudes are predominantly bright, mostly between 4.43 and 6.4, with several stars below magnitude 5, contributing to noticeable brightness. The overall configuration resembles a linear alignment within the southern celestial sphere, making it distinctive and descriptive of its structure and luminosity."
+    },
+    "65": {
+        "name": "The Southern Veil String",
+        "reasoning": "The cluster features a linear spatial distribution along right ascension from 220.81 to 228.47 degrees with declinations concentrated between -30.58 and -21.18 degrees, forming a string-like pattern. Stars have a range of visual magnitudes from 3.29 (very bright) to 6.67 (moderately faint), with no single dominant brightness, and are located in the southern celestial hemisphere."
+    },
+    "67": {
+        "name": "Celestial River of Light",
+        "reasoning": "The stars in this cluster are spread over a wide range in right ascension (approximately 224 to 251 degrees) and declination (approximately -0.56 to 42.57 degrees), forming an elongated, river-like spatial distribution. Notable bright stars with low visual magnitudes (e.g., 2.0, 2.23, 2.65) are interspersed throughout, creating a pattern of bright 'beacons' along this celestial flow, enhancing the imagery of a luminous river in the sky."
+    },
+    "66": {
+        "name": "The Southern Arc",
+        "reasoning": "The cluster exhibits a notable spread in right ascension (225.69 to 234.67) with declinations consistently negative, forming a loose, arc-like distribution. It includes stars of varying brightness, with one notably bright star (vm 2.61), but no dense central concentration, emphasizing its elongated and southern-sky orientation."
+    },
+    "69": {
+        "name": "Northern Trailblazers",
+        "reasoning": "The cluster spans a wide right ascension (226.57 to 263.75 degrees) and declination (51.96 to 69.19 degrees), with stars distributed in a loose, trail-like pattern moving northward. It includes a few moderately bright stars (e.g., vm 2.74, 3.17, 3.29) amid predominantly dimmer ones, suggesting a scattered group guiding through the northern celestial region."
+    },
+    "74": {
+        "name": "Drifting Celestial River",
+        "reasoning": "The cluster's stars exhibit a gradual increase in right ascension from approximately 232 to 270 degrees, forming a linear, river-like spatial distribution across the sky. Declination remains relatively stable around 77-82 degrees, with visual magnitudes ranging from 4.23 to 6.58, indicating moderate brightness and no extreme outliers. The steady progression in RA gives the appearance of a celestial stream drifting through the northern declinations."
+    },
+    "70": {
+        "name": "The Southern Crossroads Cluster",
+        "reasoning": "This cluster exhibits a wide spread in right ascension (approximately 14 degrees) and declination (about 14 degrees), indicating low density and a dispersed spatial distribution resembling a crossroads. Most stars have visual magnitudes around 5-6, suggesting moderate brightness, but notable outliers include a very bright star (vm 2.56) and another bright one (vm 2.74), adding points of interest. The name reflects the cluster's expansive, crossing pattern in the southern celestial hemisphere."
+    },
+    "71": {
+        "name": "Northern Crescent",
+        "reasoning": "The stars form a loose, curved pattern in right ascension spanning from 242.92 to 245.74 degrees, with declinations primarily between 29.15 and 33.86 degrees, creating a crescent-like shape in the northern sky; most stars have visual magnitudes between 4.85 and 6.66, indicating moderate brightness with one notably bright star (vm=4.85), and the cluster exhibits moderate spatial dispersion without high density."
+    },
+    "72": {
+        "name": "The Faint Arc Quintet",
+        "reasoning": "This cluster forms a loose arc-like spatial distribution in declination from 45.6 to 48.96 degrees, with moderate brightness (visual magnitudes from 3.89 to 6.45, averaging around 5.34), and consists of exactly five stars, making it a small but distinct grouping."
+    },
+    "75": {
+        "name": "The Northern Triad Arc",
+        "reasoning": "The cluster's stars are spread over a wide range in right ascension (247.16 to 256.27 degrees) but are concentrated in a narrow declination band (38.92 to 45.98 degrees), forming a linear, arc-like distribution in the northern celestial hemisphere. It includes three prominent bright stars with visual magnitudes of 3.53, 4.2, and 4.82, creating a triad of highlights within the arc structure."
+    },
+    "73": {
+        "name": "Lyra's Scattered Tapestry",
+        "reasoning": "The cluster spans a wide range in right ascension (~247\u00b0 to ~328\u00b0) and declination (~9\u00b0 to ~60\u00b0), indicating an elongated, spread-out distribution rather than a dense core. Visual magnitudes range widely from very bright (0.03, 0.77) to dim (7.14), with no dominant bright central concentration, creating a varied brightness tapestry. The name reflects its expansive, scattered nature and the constellation-like diversity in brightness, evoking a celestial tapestry spread across the sky, with 'Lyra' nodding to its location near the constellation Lyra in celestial coordinates."
+    },
+    "76": {
+        "name": "Celestial Scatter Glimmers",
+        "reasoning": "The cluster exhibits a broad and sparse spatial distribution with stars scattered across right ascension (approximately 250 to 280 degrees) and declination (from about -4 to 19 degrees), indicating low density. It includes several bright stars with visual magnitudes as low as 2.08 and 2.77, interspersed among dimmer ones, creating a pattern of scattered points of brightness. The name reflects the dispersed nature and the presence of notable bright glimmers within the cluster."
+    },
+    "77": {
+        "name": "Southern Radiance Nexus",
+        "reasoning": "The cluster spans a wide range in right ascension (250.39 to 265.86 degrees) and declination (-29.72 to -10.52 degrees), with a concentration of bright stars in the southern celestial hemisphere. Notable features include a prominent star with visual magnitude 2.43, several stars with magnitudes below 4.0 indicating high brightness, and a scattered spatial distribution that suggests a loose grouping with bright focal points, making it a nexus of luminosity in the southern sky."
+    },
+    "78": {
+        "name": "The Bright Northern String",
+        "reasoning": "The cluster spans a wide declination range from 45\u00b0 to 58\u00b0, forming an elongated north-south pattern, and contains several exceptionally bright stars with visual magnitudes as low as 2.23 and 2.79, indicating high luminosity and visibility."
+    },
+    "79": {
+        "name": "Northern Celestial Scatter",
+        "reasoning": "The cluster spans a wide range in right ascension (254.07 to 305.02 degrees) and declination (62.4 to 77.55 degrees), indicating a loose and elongated spatial distribution primarily in the northern celestial hemisphere, with no dense central concentration. The visual magnitudes range from 3.07 to 6.59, featuring several moderately bright stars but no extreme brightness outliers, contributing to a scattered and varied appearance rather than a tight grouping."
+    },
+    "81": {
+        "name": "Southern Serpentine Stream",
+        "reasoning": "The stars form an elongated stream spanning approximately 19.5 degrees in right ascension (266.43 to 285.87) and 17.5 degrees in declination (-68.76 to -58.71), with most stars concentrated between declination -68 and -61, creating a winding, serpent-like pattern. The cluster lacks a dense central concentration but features a prominent bright anchor star at RA 266.43, Dec -64.72 (vm 3.62), with other moderately bright stars (vm 4-5) scattered throughout, giving it a meandering, stream-like appearance in the southern celestial hemisphere."
+    },
+    "80": {
+        "name": "The Steadfast Asterism",
+        "reasoning": "The cluster exhibits a linear spatial alignment in right ascension (from 265.95 to 271.56 degrees) with a concentration in declination around -5 to -8 degrees, forming a distinct asterism. Stars display a range of visual magnitudes (3.34 to 6.76), with notable brightness (e.g., magnitude 3.34 star) and moderate density, suggesting a stable, elongated configuration."
+    },
+    "82": {
+        "name": "Scattered Lanterns of Orion's Belt",
+        "reasoning": "The stars are spread over a wide range in right ascension (274.35 to 290.14 degrees) and declination (-14.56 to -0.96 degrees), indicating low density and a loose, scattered spatial distribution. Visual magnitudes range from 3.26 to 6.9, with several bright stars (magnitude <4) like 3.26, 3.44, and 3.85, giving the cluster a lantern-like appearance due to the mix of bright and dim stars. The overall brightness and spread resemble stars in the Orion region, suggesting a descriptive name that reflects its scattered nature and notable brightness variations."
+    },
+    "84": {
+        "name": "Southern Celestial Arc",
+        "reasoning": "The cluster spans a wide range in right ascension (285\u00b0 to 322\u00b0) while maintaining a relatively tight declination range (-73\u00b0 to -58\u00b0), forming a curved arc in the southern celestial hemisphere. It contains several bright stars with visual magnitudes below 4.0 (notably 3.42, 3.56, 3.65, 3.96), creating a mix of bright anchor points among fainter companions. The spatial distribution suggests a loose but coherent grouping following celestial coordinates rather than a dense core."
+    },
+    "83": {
+        "name": "Northern Glimmering Arc",
+        "reasoning": "The cluster spans a declination range from -2.79 to 6.07 degrees, predominantly in the northern celestial hemisphere, with a tight right ascension spread (285.88 to 295.18 degrees) suggesting a linear or slightly curved arrangement. Visual magnitudes range from 3.36 (very bright) to 6.73 (moderately faint), with an average magnitude around 5.5, indicating a moderately bright cluster overall, enhanced by a few standout bright stars."
+    },
+    "87": {
+        "name": "Southern Crossfire",
+        "reasoning": "The cluster exhibits a broad spatial distribution in the southern celestial hemisphere with declinations ranging from -59.38 to -52.45 degrees, and a tight range of right ascension from 295.08 to 306.41 degrees, giving it a cross-like elongated shape. It includes a notably bright star with a visual magnitude of 1.94, adding to its prominence, while other stars are moderately bright, creating a dynamic pattern reminiscent of celestial fire or engagement."
+    },
+    "86": {
+        "name": "Southern Corona Glimmer",
+        "reasoning": "The cluster spans a wide range in declination from -19.12 to -7.47 degrees, indicating a southern celestial location. It contains several bright stars, including one with a visual magnitude of 3.08, making it notably luminous, while others range down to 6.74, contributing to a glimmering effect. The distribution is moderately dense with stars concentrated in areas like around RA 304-305 and DEC -12 to -15, resembling a corona-like pattern of scattered brilliance."
+    },
+    "85": {
+        "name": "Celestial Spine String",
+        "reasoning": "The stars form a linear pattern along right ascension from approximately 297.8 to 304.93 degrees, with declination values clustering near the celestial equator (-4.08 to 4.4 degrees), resembling a spine-like structure. The visual magnitudes range from 3.23 to 6.53, with a moderately bright star (vm=3.23) adding prominence, and the spatial distribution suggests a string-like alignment in the sky."
+    },
+    "88": {
+        "name": "Celestial Arc of Brilliance",
+        "reasoning": "The cluster exhibits a wide right ascension spread from ~303.5\u00b0 to ~315.8\u00b0 and declination from ~8.4\u00b0 to ~21.8\u00b0, indicating a loose, elongated distribution. It contains multiple bright stars with visual magnitudes below 4.0 (e.g., 3.63, 3.77, 4.03), interspersed with dimmer stars, creating a pattern of brilliance along the spatial arc. The name reflects the extended shape and the notable brightness variations within the cluster."
+    },
+    "89": {
+        "name": "Southern Celestial Arc",
+        "reasoning": "The cluster spans a narrow declination range from -47.58 to -42.05 degrees, with a spread in right ascension from 304.82 to 312.37 degrees, forming a curved, arc-like pattern in the southern sky. Stars are relatively bright, with visual magnitudes mostly between 3.11 and 6.13, including one notably bright star at 3.11 magnitude."
+    },
+    "94": {
+        "name": "Northern Cascade of Radiance",
+        "reasoning": "The cluster spans a notable range in right ascension (311 to 342 degrees) and declination (68 to 73 degrees), creating a cascading spatial distribution across the northern sky. It features a mix of bright stars, including one with a very low visual magnitude of 3.23, indicating high brightness, and a variety of magnitudes from 5 to 7, giving it a radiant, varied luminosity profile."
+    },
+    "90": {
+        "name": "The Celestial Glimmer Chain",
+        "reasoning": "The cluster exhibits a bright core with several high-magnitude stars (e.g., 2.87, 3.68, 4.07, 4.28) interspersed throughout, creating a glimmering effect. The stars are spread over a wide range in right ascension (from about 313.7 to 333.11 degrees) and declination (from approximately -26.35 to -9.08 degrees), forming an elongated, chain-like spatial distribution rather than a dense grouping, suggesting a scattered but luminous assembly."
+    },
+    "91": {
+        "name": "The Faint Northern Scatter",
+        "reasoning": "The cluster spans a range in right ascension from 316.63 to 322.03 degrees and declination from 29.9 to 34.9 degrees, indicating a loose, scattered spatial distribution. Stars have visual magnitudes between 3.2 and 6.17, with most being faint (magnitudes above 5), except for one moderately bright star at magnitude 3.2. This combination of low density and predominantly faint brightness suggests a sparse, dim grouping in the northern celestial hemisphere."
+    },
+    "93": {
+        "name": "Southern Spire",
+        "reasoning": "The cluster is elongated along the right ascension axis from approximately 319.55 to 326.91 degrees, with a notable gap in star distribution, giving it a spire-like appearance. Located in the southern celestial hemisphere (declinations from -9.75 to -0.39 degrees), it features a prominent bright star with a visual magnitude of 2.91, adding to its standout structure."
+    },
+    "92": {
+        "name": "The Luminous Anchor",
+        "reasoning": "This cluster features a very bright anchor star with a visual magnitude of 2.39 at RA 326.05, Dec 9.88, which is significantly brighter than the rest (most stars are between 4.84 and 6.4 magnitude). The stars are distributed across a wide range in right ascension (319.72 to 332.66 degrees) and declination (5.06 to 14.77 degrees), with several stars clustering around Dec 10-12, giving the appearance of a dense anchor point around the bright star, while others extend outward like a chain or spread, emphasizing the anchor's prominence."
+    },
+    "95": {
+        "name": "The Sparse Brightness Arc",
+        "reasoning": "The cluster spans a wide range in right ascension (321.0 to 332.07 degrees) and declination (22.18 to 28.79 degrees), indicating a loose, extended spatial distribution rather than a dense grouping. It includes several bright stars with visual magnitudes below 5.0, such as 3.76 and 4.13, contributing to notable brightness, but the overall arrangement is elongated and sparse, resembling an arc-like pattern in the sky."
+    },
+    "96": {
+        "name": "Bright Centaurian Cascade",
+        "reasoning": "The cluster spans a wide range in right ascension (323.35 to 351.79 degrees) and declination (-37.25 to -53.97 degrees), indicating an elongated, flowing distribution. It includes a few notably bright stars, such as one with a visual magnitude of 1.74 and another at 2.1, which stand out amidst mostly moderate magnitudes. The combination of a cascading spatial spread and prominent bright stars in the southern celestial hemisphere (negative declinations) inspired this descriptive name."
+    },
+    "97": {
+        "name": "Southern Celestial Flare",
+        "reasoning": "The cluster spans a wide range in right ascension (325.14 to 349.24 degrees) and declination (-64.97 to -53.63 degrees), indicating an extended and sparse distribution in the southern celestial hemisphere. It features a mix of brightness, with a notably bright star at visual magnitude 2.86, adding a 'flare' effect, while most stars are moderately bright (magnitudes 4-6), contributing to a scattered yet luminous appearance."
+    },
+    "98": {
+        "name": "Faint Galactic Stream",
+        "reasoning": "The cluster spans a wide range in right ascension (approximately 12 degrees) with relatively tight declination spread, forming an elongated structure along the celestial equator. Most stars have visual magnitudes between 4 and 6, indicating generally faint brightness with only a few moderately bright exceptions, characteristic of a sparse stream-like grouping in the galaxy."
+    },
+    "99": {
+        "name": "The Faint Arc",
+        "reasoning": "The stars form a loose, slightly curved distribution in right ascension from 332.5 to 340.44 degrees, with declinations spreading between 26.76 and 35.73 degrees. Most stars have visual magnitudes between 4.79 and 6.56, indicating a generally faint cluster with only a few moderately bright members (e.g., vm 4.29 and 4.79), suggesting a subtle arc of dim stars."
+    },
+    "100": {
+        "name": "Gemini's Scattered Radiance",
+        "reasoning": "The cluster spans a wide range in right ascension (335.38\u00b0 to 348.36\u00b0) and declination (6.62\u00b0 to 21.13\u00b0), indicating a loose, scattered distribution. It includes a mix of bright and dim stars, with one notably bright star (vm 2.49) and several moderately bright ones (vm 3.4-5.0), creating a varied radiance. The name reflects the scattered spatial layout and the diversity in brightness, evoking the constellation Gemini due to the RA range falling near its location."
+    },
+    "101": {
+        "name": "The Bright Sentinel's Belt",
+        "reasoning": "This cluster spans approximately 13 degrees in right ascension and 11 degrees in declination, forming a loose belt-like structure. It features several notably bright stars, with visual magnitudes as low as 1.16, indicating high luminosity, alongside multiple stars with magnitudes below 5, creating a pattern of scattered bright sentinels across the region."
+    },
+    "104": {
+        "name": "Southern Crescent Cluster",
+        "reasoning": "The stars form a curved, crescent-like distribution in the southern celestial hemisphere, with declinations around -40 to -45 degrees and right ascensions spanning approximately 340 to 355 degrees. The cluster includes several bright stars, such as those with visual magnitudes around 3.9 to 4.85, enhancing its visibility and defining its arc-like shape."
+    },
+    "102": {
+        "name": "Scattered Radiance Field",
+        "reasoning": "The cluster exhibits a wide spread in declination (-10.56 to -19.61 degrees) and right ascension (340.9 to 347.46 degrees), indicating low density and a scattered spatial distribution, while containing a prominent bright star with a visual magnitude of 3.27, contributing to its notable radiance amidst the dispersion."
+    },
+    "103": {
+        "name": "The Northern Crescent",
+        "reasoning": "The cluster spans right ascension from 340.75 to 352.93 degrees and declination from 23.74 to 32.83 degrees, forming an elongated crescent shape in the sky. It contains a mix of bright stars (vm as low as 2.42) and dimmer ones (vm up to 6.69), with notable bright anchors like the 2.42 magnitude star, giving it a varied luminosity profile along its arc."
+    },
+    "105": {
+        "name": "Southern Stream Cluster",
+        "reasoning": "This cluster displays a linear distribution in right ascension from 343.15 to 352.88 degrees, with declination values concentrated between approximately -14 and -1 degrees, indicating a southward-trending alignment. The visual magnitudes range from 3.74 to 6.68, with several stars brighter than magnitude 5, suggesting moderate brightness and visibility. The name reflects the elongated, stream-like spatial pattern and the southern declination focus of the stars."
+    },
+    "106": {
+        "name": "Scattered Radiance",
+        "reasoning": "The cluster exhibits a wide spatial distribution with right ascension spanning approximately 7.6 degrees and declination about 5.7 degrees, indicating low density and a scattered configuration. Despite the dispersion, it contains several bright stars, including one with a visual magnitude of 3.66, contributing to an overall luminous character. The name reflects the combination of scattered arrangement and notable brightness."
+    },
+    "107": {
+        "name": "The Southern Arc Cluster",
+        "reasoning": "This cluster exhibits a linear and arc-like distribution in right ascension from approximately 353 to 1 degrees, with declinations tightly grouped between -11 and -20 degrees, forming a cohesive celestial arc in the southern sky. The stars are moderately bright, with visual magnitudes ranging from 4.49 to 7.1, indicating good visibility. The spatial arrangement suggests a possible gravitational or formation-related alignment, making 'The Southern Arc Cluster' a descriptive and unique name that highlights its distinctive linear shape and southern declination."
+    }
+}
