@@ -2,6 +2,7 @@ import pygame as pg
 import math
 import numpy as np
 from random import randint
+import json
 
 data = []
 constellations = []
@@ -30,56 +31,12 @@ class Star:
         self.right_ascension = math.radians(float(right_ascension))
         self.declination = math.radians(float(declination))
         self.visual_magnitude = float(visual_magnitude)
-        self.vector = np.array([math.cos(self.declination) * math.cos(self.right_ascension),
+        self.unit_vector = np.array([math.cos(self.declination) * math.cos(self.right_ascension),
                                 math.cos(self.declination) * math.sin(self.right_ascension),
                                 math.sin(self.declination)])
         self.name = name
 
         self.cluster_id = int(cluster_id)
-        # precompute unit direction for speed (used in vectorized projection)
-        norm = np.linalg.norm(self.vector)
-        if norm == 0:
-            self.unit_vector = self.vector
-        else:
-            self.unit_vector = self.vector / norm
-
-    def get_projection(self):
-        # unit direction to star
-        star_dir = self.vector / (np.linalg.norm(self.vector) + 1e-9)
-
-        # camera forward direction (unit)
-        cam_dir = camera_vector / (np.linalg.norm(camera_vector) + 1e-9)
-
-        # world up (z-up). Adjust if your data uses different convention.
-        world_up = np.array([0.0, 0.0, 1.0])
-
-        # camera right vector
-        right = np.cross(cam_dir, world_up)
-        if np.linalg.norm(right) < 1e-6:
-            # camera nearly aligned with world_up; pick a fallback right vector
-            right = np.array([1.0, 0.0, 0.0])
-        else:
-            right = right / np.linalg.norm(right)
-
-        # camera up vector
-        up = np.cross(right, cam_dir)
-        up = up / (np.linalg.norm(up) + 1e-9)
-
-        # depth in camera space
-        forward = np.dot(cam_dir, star_dir)
-        if forward <= 0:
-            return None  # behind the camera
-
-        # perspective projection parameters (tweak focal to taste)
-        focal = 300.0
-
-        x_cam = np.dot(right, star_dir)
-        y_cam = np.dot(up, star_dir)
-
-        screen_x = WIDTH / 2 + (x_cam / forward) * focal
-        screen_y = HEIGHT / 2 - (y_cam / forward) * focal
-
-        return (int(screen_x), int(screen_y))
 
     def __repr__(self):
         return f"Star({self.star_number}{self.name}, RA: {self.right_ascension}, Dec: {self.declination}, Mag: {self.visual_magnitude})"
@@ -127,6 +84,11 @@ with open("constellations.csv", "r") as f:
                 ra_str, dec_str = point_str.split(";")
                 points.append((float(ra_str), float(dec_str)))
         constellations.append(Constellation(name, points))
+
+names = {}
+with open ("cluster_names.json", "r") as f:
+    file_content = f.read()
+    names = json.loads(file_content)
 
 # Build NumPy arrays once for vectorized projection
 if len(data) > 0:
@@ -411,7 +373,6 @@ def render_cluster_boundaries(screen, cluster_points_dict, padding=8, alpha=None
             # For two points, draw a thick capsule-like rectangle/line with padding
             a = np.array(pts[0], dtype=float)
             b = np.array(pts[1], dtype=float)
-            mid = (a + b) / 2.0
             vec = b - a
             length = np.hypot(vec[0], vec[1])
             if length < 1e-6:
@@ -459,6 +420,10 @@ def render_cluster_boundaries(screen, cluster_points_dict, padding=8, alpha=None
         color = cluster_colors.get(cid, (200, 200, 200))
         try:
             pg.draw.polygon(screen, color, expanded, width=2)
+            text = names.get(str(cid), f"Cluster {cid}")
+            font_surf = font.render(text, True, color)
+            # draw label at centroid
+            screen.blit(font_surf, (int(cx - font_surf.get_width() // 2), int(cy - font_surf.get_height() // 2)))
         except Exception:
             # fallback: draw hull edges
             for a, b in zip(hull, hull[1:] + hull[:1]):
@@ -550,13 +515,13 @@ while running:
                 base_color = cluster_colors.get(cid, (255, 255, 255))
                 # normalized flux in [0,1]; fall back to a simple mag-based factor if missing
                 # fallback mapping: brighter (smaller mag) -> larger factor
-                f = max(0.0, min(1.0, 1.0 - visual_magnitudes[idx] * 40/255))
+                f = max(0.0, min(1.0, 1.0 - 0.45*visual_magnitudes[idx]**4/255))
 
                 # keep colors visible: scale between 0.25 and 1.0
-                scale = 0.1 + 0.9 * f
+                scale = f
                 color = (int(base_color[0] * scale), int(base_color[1] * scale), int(base_color[2] * scale))
             else:
-                brightness = min(255, max(0, 255-visual_magnitudes[idx]*40))
+                brightness = min(255, max(0, 255-0.45*visual_magnitudes[idx]**4))
                 color = (brightness, brightness, brightness)
             # radius scaled slightly by brightness
             pg.draw.circle(screen, color, (int(xi), int(yi)), 2)
