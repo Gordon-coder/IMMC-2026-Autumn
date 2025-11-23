@@ -18,8 +18,6 @@ camera_vector = np.array([0.0, 0.0, 0.0])
 
 use_concave_hull = False
 
-# performance / projection parameters
-FOCAL_LENGTH = 500.0
 FPS_CAP = 60
 
 render_constellations = True
@@ -107,10 +105,7 @@ else:
     fluxes = np.empty((0,))
     norm_fluxes = np.empty((0,))
 
-# Option: assign noise points (cluster_id == -1) to their nearest detected cluster centroid
-# This removes outliers for visualization. Set to False if you prefer to keep noise.
-ASSIGN_NOISE_TO_NEAREST = True
-if ASSIGN_NOISE_TO_NEAREST and len(data) > 0:
+if len(data) > 0:
     # build mapping from cluster -> indices (exclude -1)
     cluster_to_indices = {}
     for i, s in enumerate(data):
@@ -161,8 +156,8 @@ for s in data:
 # clock to cap FPS and reduce CPU usage
 clock = pg.time.Clock()
 
-# current focal length (zoom). Use a variable so the mouse wheel can change it.
-focal = FOCAL_LENGTH
+# focal length (zoom)
+focal = 500
 
 def render_radial_gradient_backgrounds(screen, cluster_centers_dict, cluster_points_dict, alpha_value=40):
     """Render radial gradient halos around each cluster centroid.
@@ -247,15 +242,8 @@ def compute_concave_hull(points, alpha=40.0):
     a Delaunay triangulation and keeps triangle edges whose circumradius
     is <= alpha. The boundary of the resulting set of triangles is returned
     as one or more polygons; we pick the largest polygon by area.
-
-    If SciPy is not available or the operation fails, fall back to convex hull.
-    Alpha is in the same units as point coordinates (pixels here).
     """
-    try:
-        from scipy.spatial import Delaunay
-    except Exception:
-        # SciPy not available: fallback
-        return compute_convex_hull(points)
+    from scipy.spatial import Delaunay
 
     pts = np.array(points, dtype=float)
     if len(pts) <= 3:
@@ -452,16 +440,15 @@ while running:
     for event in pg.event.get():
         if event.type == pg.QUIT:
             running = False
+
         if event.type == pg.MOUSEBUTTONDOWN:
             looking = True
         if event.type == pg.MOUSEBUTTONUP:
             looking = False
         if event.type == pg.MOUSEWHEEL:
-            # event.y is positive when scrolling up (away from user) -> zoom in
-            # use multiplicative zoom for smooth scaling
             focal *= 1.1 ** event.y
-            # clamp focal to reasonable range
             focal = max(300.0, min(5000.0, focal))
+
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_c:
                 render_constellations = not render_constellations
@@ -563,7 +550,6 @@ while running:
     # render constellations as lines between projected constellation points
     if render_constellations:
         for const in constellations:
-            # project each constellation point using the same camera basis
             proj_points = []
             for ra_val, dec_val in const.points:
                 ra = math.radians(float(ra_val))

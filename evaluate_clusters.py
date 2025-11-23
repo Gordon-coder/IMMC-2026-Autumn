@@ -16,7 +16,6 @@ Dependent variables to measure:
 A graph will be created for each independent variable showing its effect on each dependent variable. (total of 9 graphs)
 """
 
-# Define ranges for independent variables
 delta_eps = 0.1
 eps_deg_range = np.arange(1, 5, delta_eps)
 delta_min_samples = 1
