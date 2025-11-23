@@ -70,7 +70,7 @@ def load_star_vectors_from_csv(csv_path: str) -> Tuple[List[dict], np.ndarray, n
 
             # compute flux from visual magnitude using Pogson relation
             # flux ~ 10^(-0.4 * m)
-            flux = 10 ** (-0.4 * visual_mag)
+            flux = max(0.0, min(1.0, 1.0 - 0.45*visual_mag**4/255))
 
             stars.append({
                 "star_number": star_number,
