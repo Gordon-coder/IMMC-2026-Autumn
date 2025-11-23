@@ -1,434 +1,77 @@
 {
-    "0": {
-        "name": "Fenrir's Fang Cluster",
-        "reasoning": "The cluster exhibits a wide spread in declination (approximately 28 to 78 degrees) and right ascension (1.29 to 359.75 degrees, indicating potential grouping around 0/360 degrees), with notable bright stars (visual magnitude as low as 1.79) scattered throughout, suggesting a dispersed but luminous formation. Named after Fenrir, the monstrous wolf in Norse mythology known for its ferocity and eventual breaking free, reflecting the cluster's expansive and untamed spatial distribution with standout bright points."
-    },
-    "2": {
-        "name": "Latona's Scattered Kin",
-        "reasoning": "The cluster exhibits a dispersed spatial distribution with stars spread across a wide range in right ascension and declination, and features a mix of moderately bright stars, reminiscent of Leto's wandering children in Greek mythology, who were scattered but significant."
-    },
-    "1": {
-        "name": "Janus Cluster",
-        "reasoning": "The cluster exhibits a dual-nature spatial distribution with stars scattered across RA 0-16 degrees and RA 357-1 degrees, forming two distinct groups reminiscent of Janus, the Roman god of beginnings, transitions, and duality, often depicted with two faces looking in opposite directions, while the presence of several bright stars (vm < 4.5) adds to its prominence."
-    },
-    "3": {
-        "name": "Cepheus's Luminous Guard",
-        "reasoning": "The cluster features stars with relatively bright visual magnitudes, including one of 3.21 (very bright), and is located in high declination regions (above 70 degrees), resembling the constellation Cepheus in the northern sky, known for its guarding role in mythology."
-    },
-    "5": {
-        "name": "Helios' Spearpoints",
-        "reasoning": "The cluster contains three notably bright stars with visual magnitudes of 2.39, 3.31, and 3.88, which stand out against the fainter majority, resembling the sharp, piercing points of a spear. Named after Helios, the Greek god of the sun, to reflect the brightness and brilliance of these standout stars."
-    },
-    "7": {
-        "name": "Lyra's Scattered Luminaries",
-        "reasoning": "This cluster features stars with a wide range of right ascension (2.51 to 9.2 degrees) and declination (10.19 to 20.29 degrees), indicating a scattered spatial distribution, but includes a notably bright star (visual magnitude 2.83), reminiscent of Vega in the Lyra constellation, symbolizing a shining jewel amidst dispersion, drawing from Greek mythology where Lyra represents the lyre of Orpheus, celebrated for its brilliance and celestial harmony."
-    },
-    "4": {
-        "name": "Atlas's Burden",
-        "reasoning": "The cluster's stars are widely dispersed across right ascension, suggesting a scattered distribution that resembles the mythological Titan Atlas bearing the weight of the heavens on his shoulders, with bright stars like the one at vm 2.8 and 3.76 punctuating the expanse."
-    },
-    "6": {
-        "name": "Phoenix Resurgence",
-        "reasoning": "The cluster spans a wide range in right ascension (from ~356 to ~16 degrees) and declination (around -60 to -65 degrees), with stars distributed in a cyclic pattern that resembles the mythological Phoenix rising from its ashes, symbolizing renewal and a broad, sweeping celestial presence."
-    },
-    "8": {
-        "name": "Hera's Gatekeeper",
-        "reasoning": "This cluster features a prominent bright star with a visual magnitude of 2.04, strongly influencing its overall brightness, while the remaining stars are relatively faint and widely dispersed. In Greek mythology, Hera, queen of the gods, is associated with guardianship and celestial observation, making this name fitting for a cluster dominated by a single luminous 'gatekeeper' star amid a sparse array."
-    },
-    "9": {
-        "name": "Sagitta Asterope",
-        "reasoning": "The cluster spans a wide range in right ascension (9.34 to 23.57 degrees) with a concentrated declination around 30-41 degrees, resembling an arrow's flight path in the sky, and includes a notably bright star (vm 2.06) reminiscent of Sagitta, the arrow constellation, combined with Asterope, a Pleiad star, symbolizing scattered light points in a directional formation."
-    },
-    "12": {
-        "name": "Cassiopeia's Crown",
-        "reasoning": "The stars are distributed in high declinations near the celestial pole, covering a wide range of right ascension, forming a circumpolar ring-like pattern similar to a crown, with a mix of bright (visual magnitude down to 2.02) and dimmer stars, reminiscent of the constellation Cassiopeia's mythological association with royalty and its prominent position in the northern sky."
-    },
-    "11": {
-        "name": "Athena's Strategists",
-        "reasoning": "This cluster displays a wide spatial distribution with stars spread across right ascension (10.4\u00b0 to 18.44\u00b0) and declination (19.19\u00b0 to 27.21\u00b0), resembling a strategic battlefield formation. The presence of several moderately bright stars (visual magnitude 4.06-6.54) mixed with fainter ones suggests a coordinated group, much like Athena's wise and strategic warriors in Greek mythology who planned their positions carefully rather than clustering tightly."
-    },
-    "13": {
-        "name": "Skoll's Hunt",
-        "reasoning": "The cluster shows a dispersing pattern with stars spread across a wide range in right ascension and declination, resembling the Norse wolf Skoll's relentless chase of the sun across the sky, while the presence of both bright (low magnitude) and faint stars adds to the dynamic, predatory theme."
-    },
-    "10": {
-        "name": "Artemis's Pursuit",
-        "reasoning": "The cluster spans a wide declination range from -14.6 to -6.91 degrees, suggesting a scattered, expansive formation reminiscent of a hunt or chase across the sky. This aligns with Artemis, the Greek goddess of the hunt, symbolizing the stars' dispersed yet purposeful arrangement."
-    },
-    "14": {
-        "name": "Hydra's Spine",
-        "reasoning": "The cluster spans a linear-like formation from RA 21.01 to 27.86 with declinations ranging from -11.32 to -7.03, resembling a serpentine shape. The presence of bright stars (visual magnitudes as low as 3.6) suggests a prominent, guiding trail, reminiscent of the multi-headed serpent Hydra from Greek mythology."
-    },
-    "15": {
-        "name": "Orion's Belt of Pearls",
-        "reasoning": "The cluster spans a wide range in right ascension and declination with a mix of very bright and dim stars, including notable bright stars such as vm=2.64 and vm=2.0, evoking the scattered yet luminous pearls in a belt, akin to Orion's Belt in Greek mythology, which is a prominent and recognizable pattern in the sky."
-    },
-    "16": {
-        "name": "Orion's Archipelago",
-        "reasoning": "The cluster spans a wide range in right ascension (21.27 to 76.89 degrees) and declination (-69.62 to -55.05 degrees), with stars distributed in a loose, scattered manner reminiscent of an archipelago. The name draws from Orion, a prominent hunter in Greek mythology associated with a vast and recognizable constellation, fitting the cluster's expansive and varied spatial distribution."
-    },
-    "17": {
-        "name": "Atlas's Burden",
-        "reasoning": "The cluster spans a wide range in right ascension and declination, with stars scattered over a large area, resembling the vast sky held up by Atlas in Greek mythology. The presence of several bright stars (vm < 4.0) and a mix of magnitudes reflects the enduring strength and variability of his task."
-    },
-    "18": {
-        "name": "The Archer's Arrow",
-        "reasoning": "The cluster's stars form a linear arrangement in right ascension with minimal declination spread, resembling the trajectory of an arrow, and features a notably bright central star (vm: 3.56), evoking the precision and brilliance of an archer's shot, inspired by figures like Apollo or Artemis from Greek mythology."
-    },
-    "20": {
-        "name": "Hydra's Brilliant Knot",
-        "reasoning": "This cluster features a wide spatial distribution in right ascension (spanning approximately 12.48 degrees) and declination (spanning approximately 8.31 degrees), with notably bright stars including two with visual magnitudes below 4.4, reminiscent of the multi-headed Hydra from Greek mythology, whose scattered and luminous nature symbolizes the cluster's expansive and bright characteristics."
-    },
-    "19": {
-        "name": "Orion's Belt",
-        "reasoning": "The cluster spans a range in right ascension (36.78 to 42.19 degrees) and declination (21.96 to 29.93 degrees), with stars of moderate brightness (visual magnitudes 4.66 to 7.09) and a relatively linear spatial distribution, reminiscent of the alignment and prominence of the three stars in Orion's Belt from Greek mythology."
-    },
-    "21": {
-        "name": "Lyra's Lyre",
-        "reasoning": "This cluster exhibits a broad spatial distribution in right ascension from 40.59\u00b0 to 51.76\u00b0, with stars forming a curved or sweeping pattern in declination, reminiscent of the shape of a lyre. In Greek mythology, Lyra was the lyre of Orpheus, symbolizing harmony and celestial music, which aligns with the cluster's graceful arrangement and its stars' moderate visual magnitudes, mostly between 4.35 and 6.57, suggesting a harmonious, albeit spread-out, grouping."
-    },
-    "22": {
-        "name": "Atlas",
-        "reasoning": "This cluster shows stars with a wide spread in right ascension (approximately 8 degrees) and declination (approximately 6 degrees), suggesting spatial distribution resembling the Titan Atlas holding up the celestial sphere. The presence of moderately bright stars (visual magnitudes from 3.63 to 7.0) symbolizes a foundational group supporting the heavens in mythology."
-    },
-    "23": {
-        "name": "Hydra's Serpentine",
-        "reasoning": "The stars form a loose, elongated chain spanning approximately 5 degrees in right ascension with declination variations, resembling the winding shape of the Hydra constellation from Greek mythology, and the visual magnitudes range from moderately bright (3.89) to dimmer stars, suggesting a serpentine celestial formation."
-    },
-    "24": {
-        "name": "Auriga's Luminous Tapestry",
-        "reasoning": "This cluster features a wide spatial distribution with notable variations in brightness, including several stars with high visual magnitudes (e.g., 3.69, 3.87, 4.09) that stand out, resembling the intricate and bright patterns woven by Auriga, the charioteer constellation from Greek mythology, known for its association with stars and celestial artistry."
-    },
-    "26": {
-        "name": "Astraea's Veil",
-        "reasoning": "The stars in this cluster are widely distributed across a large range in right ascension (50 to 295 degrees) and declination (from -85 to +55 degrees) with no obvious dense core, suggesting a diffuse and scattered structure. This resembles the scattered nature of Astraea, the Greek goddess of innocence and justice, who fled to the heavens and became the constellation Virgo, symbolizing a widespread and ethereal presence. The name reflects the cluster's broad spatial distribution and lack of central concentration."
-    },
-    "25": {
-        "name": "Lerna's Nebulous Serpent",
-        "reasoning": "The cluster stars exhibit a wide spread in right ascension (50.82 to 62.32 degrees) and declination (-5.08 to -16.59 degrees), forming a dispersed, serpentine-like pattern. It contains several bright stars (e.g., vm 2.95 and 3.54) amidst dimmer ones, evoking the multi-headed Hydra of Greek mythology, which was slain by Hercules in the swampy region of Lerna, symbolizing the cluster's elongated and bright-featured structure."
-    },
-    "27": {
-        "name": "Lyra's Nebula",
-        "reasoning": "The cluster features a tight grouping of stars with a notable bright pair at RA 57.15, Dec -37.62 (visual magnitudes 5.4 and 4.73), reminiscent of the celestial harp Lyra from Greek mythology, combined with a broader nebulous-like spread of fainter stars in the surrounding area."
-    },
-    "28": {
-        "name": "Hydra's Tail",
-        "reasoning": "The cluster spans a wide range in right ascension (61.49 to 68.56 degrees) and declination (-3.75 to -10.26 degrees), forming an elongated shape reminiscent of the serpentine Hydra from Greek mythology. It contains several bright stars (visual magnitudes around 4-5) that stand out, much like the shining scales on a mythical beast's tail."
-    },
-    "29": {
-        "name": "Orion's Harrow",
-        "reasoning": "The cluster spans approximately 20 degrees in right ascension with stars concentrated around declination 59 degrees, suggesting a sweeping, elongated pattern reminiscent of Orion's iconic belt. The presence of several bright stars (visual magnitude < 5) scattered throughout enhances its prominence, akin to a harrow tool used in ancient farming, symbolizing a celestial formation that cuts across the sky."
-    },
-    "30": {
-        "name": "Orion's Sword Cluster",
-        "reasoning": "The cluster exhibits a wide spatial distribution in right ascension (approximately 15 degrees) and declination (approximately 19 degrees), with a prominent bright star (visual magnitude 0.38) standing out among others, reminiscent of the stars in Orion's Sword in Greek mythology, which features both bright and faint stars in a scattered formation."
-    },
-    "31": {
-        "name": "Hydra's Coil",
-        "reasoning": "The cluster spans a wide range in right ascension (108.28\u00b0 to 118.08\u00b0) with a serpentine-like distribution of stars, winding through declination values from -16.01\u00b0 to -8.31\u00b0, reminiscent of the multi-headed Hydra from Greek mythology. It contains a mix of moderately bright stars, including one notably bright star at visual magnitude 3.93, adding to its mythical presence."
-    },
-    "33": {
-        "name": "Helios Chariot",
-        "reasoning": "The cluster spans a wide ra from 120.34 to 146.48 degrees, suggesting a broad, elongated formation reminiscent of a chariot's path, with a notable bright star at ra 127.57 and vm 3.36, evoking the sun god Helios who drove his chariot across the sky, symbolizing the cluster's expansive and bright nature."
-    },
-    "32": {
-        "name": "Chimera Cluster",
-        "reasoning": "The cluster spans a wide range in right ascension and declination, with stars appearing from 124.13 to 138.59 in RA and 1.46 to 13.26 in dec, creating a scattered and irregular spatial distribution resembling a mythical chimera's composite form, while visual magnitudes vary from bright (3.11) to dim (7.25), adding to the patchy and varied nature."
-    },
-    "34": {
-        "name": "Hydra's Glimmer",
-        "reasoning": "The cluster spans a wide range in right ascension (125-132\u00b0) with scattered bright stars including one notably bright star (vm=3.9), reminiscent of the Hydra constellation's serpentine form and its multiple distinct, bright stars in mythology."
-    },
-    "35": {
-        "name": "Scattered Serpents",
-        "reasoning": "The cluster exhibits a wide and elongated spatial distribution in right ascension (126.9 to 151.29 degrees) and declination (40.2 to 57.42 degrees), resembling a serpent's winding form. With several bright stars (e.g., vm 3.14, 3.17) scattered throughout, it evokes the mythological serpents like J\u00f6rmungandr from Norse lore, known for their expansive and sinuous nature."
-    },
-    "36": {
-        "name": "Chimera's Gaze",
-        "reasoning": "The cluster spans a wide range in right ascension (130.08 to 145.68 degrees) and declination (27.9 to 40.24 degrees), with stars distributed in a scattered and irregular pattern reminiscent of the mythical Chimera's composite form, and features a mix of bright stars (e.g., visual magnitudes of 3.13 and 3.82) amidst fainter ones, symbolizing its diverse and unpredictable nature from Greek mythology."
-    },
-    "37": {
-        "name": "Nemean Constellation",
-        "reasoning": "The cluster features a very bright star (vm 1.98) reminiscent of the Nemean Lion's formidable presence in Greek mythology, surrounded by numerous fainter stars spread across a wide declination range (-15.83 to -1.26), symbolizing the lion's scattered strength and dominance in the celestial domain."
-    },
-    "38": {
-        "name": "Starlit Bo\u00f6tes Phalanx",
-        "reasoning": "The cluster spans a significant range in right ascension (140.88 to 150.7 degrees) and declination (21.18 to 29.65 degrees), with a mix of bright stars (visual magnitudes from 2.98 to 6.53) including one notably bright star (vm 2.98), resembling a phalanx formation in ancient Greek warfare\u2014orderly and formidable. Given its location near the Bo\u00f6tes constellation, the name merges celestial and mythological elements."
-    },
-    "39": {
-        "name": "The Leonid Gatherers",
-        "reasoning": "This cluster spans a wide range in right ascension (142-158 degrees) and declination (6-27 degrees), indicating an elongated or dispersed distribution reminiscent of the scattered followers of Leo in Greek mythology. It features a mix of bright stars (e.g., vm=1.35, 2.61) and dimmer ones, with no dense central concentration, suggesting a loose assembly of stars akin to a gathering or retinue, rather than a tight-knit group."
-    },
-    "40": {
-        "name": "Chronos' Spiral",
-        "reasoning": "The stars exhibit a spiral-like spatial pattern in their right ascension and declination coordinates, with a mix of bright and dim stars suggesting a temporal evolution or cycle, fitting Chronos, the Greek primordial god of time, who represents the eternal flow and cyclical nature of creation."
-    },
-    "41": {
-        "name": "Auriga's Chariot Cluster",
-        "reasoning": "The cluster spans a wide declination range from 36.33 to 48.78 degrees, with stars distributed across a broad right ascension from 149.42 to 159.78 degrees, evoking the image of a celestial chariot from Greek mythology. It features a mix of bright stars (e.g., visual magnitudes 3.05 and 3.45) and fainter ones, symbolizing the diverse stars that might guide or adorn Auriga's mythological vehicle."
-    },
-    "42": {
-        "name": "Aetos's Talon",
-        "reasoning": "The cluster contains a prominent star with a very bright visual magnitude of 3.85, making it stand out in the grouping, reminiscent of the sharp, dominant talon of the eagle Aetos from Greek mythology, symbolizing its leadership and brightness amid the other stars."
-    },
-    "43": {
-        "name": "Cassiopeia's Veil",
-        "reasoning": "The cluster spans a large range in right ascension and declination, indicating a wide and diffuse spatial distribution reminiscent of a celestial veil. Its most notable feature is the presence of several extremely bright stars (e.g., vm: 1.77, 1.79, 2.27, 2.37) scattered throughout, shining like jewels and evoking the mythological queen Cassiopeia, often depicted in a starry throne or associated with vanity and luminosity in Greek mythology."
-    },
-    "44": {
-        "name": "Seraphim's Scatter",
-        "reasoning": "The cluster exhibits a relatively dispersed spatial distribution with no high-density core, spanning over 12 degrees in right ascension and 10 degrees in declination. It includes a few moderately bright stars, such as one with a visual magnitude of 3.11 and others around 4-5, but lacks a dominant central brightness, giving it a scattered, celestial appearance. The name 'Seraphim's Scatter' draws from ancient angelic mythology (specifically Seraphim, the highest order of angels in Judeo-Christian tradition), evoking an image of divine beings spread across the sky, which aligns with the cluster's widespread and somewhat luminous nature."
-    },
-    "45": {
-        "name": "Hydra's Gaze",
-        "reasoning": "The cluster spans a range in right ascension (approximately 7 degrees) with stars distributed in a somewhat elongated pattern, reminiscent of the long, winding form of the Hydra constellation, while the mix of bright (visual magnitude around 4-5) and dimmer stars evokes the multi-headed gaze of the mythical Hydra."
-    },
-    "46": {
-        "name": "Artemis's Arrows",
-        "reasoning": "The stars in this cluster have a linear arrangement in right ascension from approximately 160 to 175 degrees, suggesting a directional pattern like arrows in flight, and several stars (e.g., visual magnitude 3.01, 4.71) are notably bright. This evokes Artemis, the Greek goddess of the hunt, known for her skill with a bow and arrows, reflecting the cluster's alignment and bright, piercing stars."
-    },
-    "47": {
-        "name": "Apollo's Lyre",
-        "reasoning": "This cluster features a wide spread in right ascension (over 7 degrees) with stars of varying brightness, including a notably bright star (vm=2.56), resembling the strings of a lyre played by Apollo, the Greek god of music and light, symbolizing harmony in celestial patterns."
-    },
-    "48": {
-        "name": "Orion's Scribe",
-        "reasoning": "The cluster spans a considerable range in right ascension (163.33 to 169.78 degrees) and declination (33.09 to 39.21 degrees), forming an elongated, chaotic distribution. This resembles the scattered writings of a scribe, and its connection to Orion is fitting as it references the mythological constellation known for its prominent and widespread stars."
-    },
-    "49": {
-        "name": "Odin's Spear",
-        "reasoning": "The cluster features a tight linear arrangement in right ascension (ranging from 167.93\u00b0 to 172.94\u00b0) with stars appearing aligned, reminiscent of the spear Gungnir wielded by Odin in Norse mythology, which was known for its unerring flight and precision."
-    },
-    "50": {
-        "name": "Sagitta Lucida",
-        "reasoning": "The cluster spans approximately 10 degrees in right ascension (169.3\u00b0 to 179.27\u00b0) and 12 degrees in declination (-38.01\u00b0 to -26.75\u00b0), forming a loose, elongated group reminiscent of an arrow. It contains several bright stars, including one with a visual magnitude of 3.54 (the brightest) and others below 5.0, suggesting notable luminosity. The name 'Sagitta Lucida' combines Latin for 'arrow' (referencing the spatial distribution) with 'lucida' (meaning 'bright' or 'shining'), evoking the imagery of a radiant arrow from mythology, such as the arrows of Apollo or Artemis, fitting the cluster's shape and brightness."
-    },
-    "51": {
-        "name": "Lyra's Loom",
-        "reasoning": "This cluster features a wide range of right ascension (173.68 to 182.63 degrees) and declination (8.44 to 20.22 degrees), giving it an elongated, tapestry-like spatial distribution, with one notably bright star (vm 2.14) reminiscent of Vega in the constellation Lyra, tying to the mythological lyre and its associated weaving imagery."
-    },
-    "52": {
-        "name": "Scattered Legion of Boreas",
-        "reasoning": "The cluster exhibits a wide spatial distribution in both right ascension (spanning over 15 degrees) and declination (ranging from approximately -30 to -10 degrees), indicating low density and dispersion. Its stars vary significantly in brightness (visual magnitudes from 2.0 to 6.62), with a few notably bright stars that stand out. Named after Boreas, the Greek god of the north wind, to reflect the cluster's scattered, windswept appearance and the presence of bright stars akin to guiding lights in the sky."
-    },
-    "53": {
-        "name": "Andvaranaut Cluster",
-        "reasoning": "The cluster's stars exhibit a scattered spatial distribution with varied visual magnitudes, reminiscent of the cursed treasure Andvaranaut from Norse mythology, which was dispersed and brought misfortune, reflecting the spread-out and mixed-brightness nature of the stars."
-    },
-    "54": {
-        "name": "Nyx's Veil",
-        "reasoning": "The cluster exhibits a wide spatial distribution across right ascension and declination, resembling a dispersed, veil-like structure. The presence of stars with varying visual magnitudes, including a notably bright star (vm=2.9), adds a mysterious and luminous quality, reminiscent of Nyx, the Greek primordial goddess of night, who embodies darkness and the hidden beauty of the cosmos."
-    },
-    "55": {
-        "name": "Ptolemy's Belt",
-        "reasoning": "The cluster spans approximately 14.2 degrees in right ascension and 10.7 degrees in declination, indicating a relatively elongated and spread-out distribution. This configuration resembles the belt-like arrangement of stars similar to the astronomer Ptolemy's depictions, and the name reflects the cluster's linear, widespread nature without high density, evoking ancient Greek astronomical traditions."
-    },
-    "60": {
-        "name": "Hel's Veil",
-        "reasoning": "The cluster forms a long, narrow band spanning over 42 degrees in right ascension while maintaining a concentrated declination range around -80 to -85 degrees, resembling a celestial veil. Its stars are moderately bright with magnitudes primarily between 4.32 and 6.47, including one notably bright star at magnitude 4.32. Named after Hel, the Norse goddess of the underworld, whose realm is often depicted as shrouded and distant, reflecting the cluster's elongated, veil-like structure in the southern sky."
-    },
-    "57": {
-        "name": "Orion's Quiver",
-        "reasoning": "This cluster features a wide spread in right ascension and declination, resembling a scattered group of stars, with one notably bright star (vm 0.98) standing out as a focal point, akin to the hunter Orion's prominent star Rigel or the stars in his quiver, symbolizing a dispersed but significant celestial formation."
-    },
-    "56": {
-        "name": "Orion's Belt",
-        "reasoning": "The cluster exhibits a linear spatial distribution in right ascension and declination with a range of bright stars, including one notably bright star at magnitude 3.0, reminiscent of the prominent and ordered alignment of stars in the Orion's Belt asterism from Greek mythology."
-    },
-    "59": {
-        "name": "Draco's Jeweled Tail",
-        "reasoning": "This cluster features a wide spatial distribution in the northern sky with stars spanning over 44 degrees in right ascension and 14 degrees in declination, reminiscent of the winding constellation Draco. It contains a notable bright star with a visual magnitude of 2.08, acting as a prominent jewel-like centerpiece, fitting the mythological dragon's association with treasure and celestial patterns."
-    },
-    "58": {
-        "name": "Glaukos's Beacon",
-        "reasoning": "The cluster contains a notably bright star with a visual magnitude of -0.04, reminiscent of Glaucus, the Greek sea god associated with brightness and prophecy, guiding sailors; the other stars form a scattered arrangement, suggesting a celestial beacon in the sky."
-    },
-    "61": {
-        "name": "Orion's Veil",
-        "reasoning": "The cluster features a notable bright star with a visual magnitude of 3.03, reminiscent of Orion's prominent stars, and a wide spatial distribution in right ascension and declination, giving it a veiled or scattered appearance akin to the celestial hunter's mythic cloak."
-    },
-    "62": {
-        "name": "Helios' Chariot",
-        "reasoning": "The cluster features a prominent central pair of exceptionally bright stars (visual magnitudes 2.7 and 3.58) that stand out significantly from the surrounding moderately bright stars, reminiscent of the sun god Helios' radiant chariot leading the celestial procession in Greek mythology."
-    },
-    "68": {
-        "name": "Osiris's Scepter",
-        "reasoning": "The cluster exhibits a linear spatial arrangement of stars with a prominent bright star (vm=3.83) at one end, resembling an ancient scepter, and draws from Egyptian mythology where Osiris symbolizes order and leadership, reflecting the structured and bright nature of the cluster."
-    },
-    "64": {
-        "name": "Helios's Beacon",
-        "reasoning": "The cluster features a bright star with a visual magnitude of 2.75, significantly brighter than the others whose magnitudes range from 4.54 to 6.6, creating a dominant focal point. This pattern resembles the Greek sun god Helios, who guides with a radiant beacon, symbolizing the cluster's standout luminosity amid moderately bright companions."
-    },
-    "63": {
-        "name": "Labyrinth of Asterion",
-        "reasoning": "The cluster exhibits a tightly grouped spatial distribution in right ascension (219-224 degrees) with stars sharing similar declinations, creating a dense, maze-like pattern reminiscent of the labyrinth from Greek mythology, where Asterion was the Minotaur's name."
-    },
-    "65": {
-        "name": "Hecate's Veil",
-        "reasoning": "The cluster spans approximately 7.5 degrees in right ascension and 9.4 degrees in declination, displaying a wide and dispersed spatial distribution reminiscent of a veil or shroud. Its stars have visual magnitudes ranging from 3.29 to 6.67, with the brightest star at 3.29 mag, yet overall it lacks a dense, bright core, evoking the mysterious and elusive nature of Hecate, the Greek goddess of crossroads and witchcraft, who is often associated with veils and the night sky."
-    },
-    "67": {
-        "name": "Draco's Serpentine Guard",
-        "reasoning": "This cluster exhibits a wide, elongated spatial distribution across right ascension (approximately 224 to 251 degrees) and declination (approximately -1 to 43 degrees), resembling the winding form of the dragon Draco from Greek mythology. The presence of multiple bright stars (with visual magnitudes as low as 2.0) scattered throughout the diffuse arrangement evokes the idea of a serpentine guardian with watchful, gleaming eyes."
-    },
-    "66": {
-        "name": "Hydra's Jewel",
-        "reasoning": "The cluster features a bright star with a visual magnitude of 2.61, significantly outshining the others which range from 4.62 to 6.61. This configuration resembles the many-headed Hydra from Greek mythology, where one prominent head (the bright star) leads the others, with the stars spread out in a linear fashion along right ascension and declination, evoking the serpentine form of Hydra."
-    },
-    "69": {
-        "name": "Tyr's Spearhead",
-        "reasoning": "This cluster exhibits a linear spatial distribution from lower to higher right ascension and declination, resembling the shape of a spearhead. In Norse mythology, Tyr is the god of war and justice, often associated with spear-wielding, and the cluster's bright star (vm: 2.74) serves as a focal point, akin to the tip of a spear, highlighting its structured and prominent arrangement."
-    },
-    "74": {
-        "name": "Ursa's Sentinel",
-        "reasoning": "The cluster is located in the northern sky near the constellation Ursa Major, with a wide range of right ascension values indicating an elongated formation. The presence of moderately bright stars (visual magnitudes mostly between 4-6) and its spread-out distribution resembles a group of sentinels guarding the celestial bear, drawing from Greco-Roman mythology."
-    },
-    "70": {
-        "name": "Hydra's Luminous Tail",
-        "reasoning": "The cluster spans a wide declination range of approximately 14 degrees, with a bright central star (vm 2.56) surrounded by numerous moderately bright stars, resembling the long, winding constellation Hydra, the multi-headed serpent in Greek mythology, known for its length and luminosity."
-    },
-    "71": {
-        "name": "Freyja's Tear",
-        "reasoning": "The cluster contains stars with relatively bright visual magnitudes (4.85 to 6.66) and a compact spatial distribution in right ascension (242.92 to 245.74 degrees) and declination (29.15 to 33.86 degrees), suggesting a dense and luminous grouping. Named after Freyja, the Norse goddess of beauty and love, to reflect the cluster's bright, tear-like arrangement in the sky."
-    },
-    "72": {
-        "name": "Pleiades Echo",
-        "reasoning": "This cluster exhibits a tight spatial grouping in right ascension and declination with stars of moderate to high brightness (visual magnitudes 3.89 to 6.45), reminiscent of the Pleiades star cluster in Greek mythology, known for its distinct, compact configuration of bright stars."
-    },
-    "75": {
-        "name": "Bifrost Bridge",
-        "reasoning": "The stars in this cluster are spread out along a linear path in right ascension (ra) from 247.16 to 256.27 degrees with consistent declination (dec) around 41-46 degrees, resembling a celestial bridge. In Norse mythology, Bifrost is the rainbow bridge connecting Midgard to Asgard, and this cluster's elongated, ascending arrangement evokes that mythical pathway."
-    },
-    "73": {
-        "name": "Eridanus Cascade",
-        "reasoning": "The cluster spans a wide range in right ascension from ~247\u00b0 to ~328\u00b0 and declination from ~10\u00b0 to ~59\u00b0, resembling a flowing river of stars. This extensive and somewhat linear distribution mirrors the constellation Eridanus, the celestial river in Greek mythology, which winds across the sky. The presence of several bright stars (e.g., visual magnitudes around 2-3) scattered throughout the cascade adds to its dynamic and flowing character, evoking the mythological river's eternal journey."
-    },
-    "76": {
-        "name": "Scattered Belt of Luminous Guardians",
-        "reasoning": "The cluster features a wide spatial distribution in right ascension (approximately 30 degrees) and declination (over 20 degrees), with several notably bright stars (e.g., vm 2.08, 2.77, 3.2) interspersed among dimmer ones. This pattern resembles a scattered belt of vigilant guardians from mythology, such as the Norse Einherjar, who are chosen warriors scattered across Valhalla, with the brightest stars representing their leaders."
-    },
-    "77": {
-        "name": "Loki's Labyrinth",
-        "reasoning": "The cluster exhibits a wide range of right ascension (about 15 degrees) and declination (about 19 degrees), creating a dispersed and intricate spatial distribution reminiscent of a maze. This chaotic spread, combined with varying visual magnitudes from 2.43 to 6.8, evokes the trickster and unpredictable nature of Loki from Norse mythology."
-    },
-    "78": {
-        "name": "Orion's Arc",
-        "reasoning": "The cluster features a prominent, exceptionally bright star (vm 2.23) reminiscent of the Greek hero Orion, with other bright stars (e.g., vm 2.79, 3.75, 3.8) forming a loosely distributed, elongated arc in the sky, evoking Orion's mythological strength and stellar prominence."
-    },
-    "79": {
-        "name": "Nidavellir's Forge",
-        "reasoning": "This cluster spans a wide range in right ascension (254.07 to 305.02 degrees) and declination (62.4 to 77.55 degrees), with a dispersed spatial distribution reminiscent of the scattered workshops in Norse mythology's Nidavellir. It features a mix of brighter stars (e.g., vm 3.07, 3.57, 3.83) and dimmer ones, symbolizing the varied craftsmanship of the dwarves forging treasures and artifacts in their subterranean realm."
-    },
-    "81": {
-        "name": "Orion's Scattered Quiver",
-        "reasoning": "This cluster spans a wide right ascension range (266-286 degrees) and declination range (-68 to -58 degrees), indicating a dispersed spatial distribution akin to scattered arrows. The stars have varying visual magnitudes (3.62-6.49), with several bright stars (magnitude <4) that could symbolize arrows in the quiver of Orion, the hunter from Greek mythology, referencing its scattered yet striking nature across the celestial sphere."
-    },
-    "80": {
-        "name": "Nyx's Veil",
-        "reasoning": "The cluster features a tight spatial grouping with stars concentrated around RA 269-271 and Dec -4 to -9 degrees, and includes one notably bright star (vm 3.34) that stands out like a jewel in the night, reminiscent of Nyx, the Greek primordial goddess of night, who embodies darkness adorned with stars."
-    },
-    "82": {
-        "name": "Serpent's Tail Cluster",
-        "reasoning": "The cluster features a wide dispersion in right ascension (274.35 to 290.14 degrees) with significant declination spread, resembling a winding serpent. The brightest star (vm 3.26) stands out like a guiding head, while mixed magnitudes create a textured tail, evoking the serpent deities from various mythologies such as the Greek Hydra or Norse J\u00f6rmungandr."
-    },
-    "84": {
-        "name": "Scattered Sails of the Argonauts",
-        "reasoning": "This cluster spans a wide range in right ascension (285\u00b0 to 322\u00b0) and declination (-72.91\u00b0 to -58.45\u00b0), appearing elongated and dispersed like a fleet of ships spread across the sea. The presence of several moderately bright stars (visual magnitude 3\u20134) suggests navigational beacons, reminiscent of the Argonauts' scattered sails during their mythological voyage."
-    },
-    "83": {
-        "name": "Helios' Chariot",
-        "reasoning": "The cluster features a prominent bright star with a visual magnitude of 3.36, resembling the sun god Helios leading his chariot across the sky, while other stars of moderate brightness (mostly between 4.36 and 6.73) are scattered in a broad spatial distribution, evoking the imagery of a celestial procession."
-    },
-    "87": {
-        "name": "Helios Chariot",
-        "reasoning": "This cluster features a very bright star with a visual magnitude of 1.94, reminiscent of Helios' radiant chariot in Greek mythology, and the stars are spread out across right ascension from approximately 295 to 306 degrees, suggesting a dynamic, moving formation like a celestial procession."
-    },
-    "86": {
-        "name": "Helios Corona",
-        "reasoning": "The cluster features a prominent concentration of bright stars around RA 304-305 and Dec -12 to -15, including the brightest star with a visual magnitude of 3.08, reminiscent of a radiant crown or halo, and is named for Helios, the Greek sun god, to reflect this luminous focal point surrounded by other stars."
-    },
-    "85": {
-        "name": "Astraeus' Bridge",
-        "reasoning": "The stars are distributed along a narrow range in right ascension (approximately 7 degrees), forming a linear or bridge-like structure across the celestial sphere, reminiscent of Astraeus, the Greek titan of the stars and dusk, who connected the heavens with his light."
-    },
-    "88": {
-        "name": "Orion's Serpent",
-        "reasoning": "The cluster exhibits a sinuous spatial distribution in right ascension and declination, resembling a serpent, with notable brightness variations including several stars with visual magnitude below 5, reminiscent of the bright stars in Orion, but arranged in a winding pattern akin to mythological serpents like those in Greek or Norse lore."
-    },
-    "89": {
-        "name": "Hydra's Heart",
-        "reasoning": "The cluster spans a significant range in right ascension (304.82 to 312.37 degrees) and declination (-47.58 to -42.05 degrees), suggesting an elongated, sprawling shape reminiscent of the Hydra constellation's serpentine form. It includes a notably bright star with a visual magnitude of 3.11, which stands out as the 'heart' or core of the group, drawing inspiration from the mythological Hydra's resilience and prominent role in ancient lore."
-    },
-    "94": {
-        "name": "Fenrir's Chain",
-        "reasoning": "The cluster exhibits a linear spatial distribution in both right ascension (approximately 311 to 342 degrees) and declination (approximately 68 to 73 degrees), resembling a celestial chain. Named after Fenrir, the Norse wolf bound by a magical chain, to reflect the cluster's elongated, connected appearance of stars with a mix of bright (e.g., vm 3.23) and dimmer magnitudes."
-    },
-    "90": {
-        "name": "Spear of Orion's Belt",
-        "reasoning": "This cluster features a prominent alignment of bright stars with visual magnitudes below 5.0, such as 2.87, 3.68, and 4.07, concentrated along a central ra range from approximately 316 to 326 degrees, suggesting a sword or spear-like formation. In Greek mythology, Orion is a hunter often depicted with a weapon, and the cluster's brightness and linear structure evoke this imagery."
-    },
-    "91": {
-        "name": "Lyra's Radiance",
-        "reasoning": "Named after the constellation Lyra, associated with the lyre of Orpheus in Greek mythology, this cluster features a prominent star with a bright visual magnitude of 3.2, reminiscent of Vega, Lyra's brightest star, while other stars are closely grouped in right ascension and declination, suggesting a cohesive and luminous group."
-    },
-    "93": {
-        "name": "Fenrir's Chain",
-        "reasoning": "The stars form a loose, elongated chain-like structure in declination from -9.75 to -0.39 degrees, reminiscent of the bound wolf Fenrir from Norse mythology, with a mix of brighter (vm as low as 2.91) and fainter stars symbolizing his restrained but potent nature."
-    },
-    "92": {
-        "name": "Atlas' Burden",
-        "reasoning": "The cluster exhibits a wide spatial distribution in right ascension (319.72 to 332.66 degrees) and declination (5.06 to 14.77 degrees), suggesting a scattered, expansive structure reminiscent of Atlas holding up the celestial sphere, with one notably bright star (visual magnitude 2.39) serving as a focal point amid fainter companions."
-    },
-    "95": {
-        "name": "Nyx's Veil",
-        "reasoning": "The cluster spans a wide range in right ascension (321 to 332 degrees) and declination (22 to 29 degrees), indicating a dispersed, veil-like spatial distribution. The presence of both bright (e.g., vm=3.76) and dim stars creates a subtle, mysterious appearance, reminiscent of Nyx, the Greek primordial goddess of night, who embodies darkness and concealment."
-    },
-    "96": {
-        "name": "Helios' Chariot Trail",
-        "reasoning": "This cluster spans a wide declination range from -53.97 to -37.25 degrees, resembling a celestial path or trail. The presence of several bright stars (e.g., vm 1.74, 2.1, 3.01) interspersed among dimmer ones creates a dynamic, flowing pattern akin to the sun god Helios' chariot racing across the sky in Greek mythology, symbolizing movement and luminosity."
-    },
-    "97": {
-        "name": "Eridanus Anchor",
-        "reasoning": "The cluster is spread across a wide range in right ascension (325.14 to 349.24 degrees) and declination (-64.97 to -53.63 degrees), with most stars having faint visual magnitudes (average around 5.8), but includes one very bright star (vm 2.86) near the center, reminiscent of the Eridanus constellation's flowing river anchored by a prominent star, drawing from Greek mythology where Eridanus is a celestial river."
-    },
-    "98": {
-        "name": "Auriga's Chariot",
-        "reasoning": "The cluster spans a wide spatial distribution in right ascension (approximately 12 degrees) with a mix of bright and dim stars, including several with visual magnitudes below 5, symbolizing the celestial chariot driven by Auriga in Greek mythology, which is known for its prominent and scattered stars across the sky."
-    },
-    "99": {
-        "name": "Draco's Trail",
-        "reasoning": "The stars in this cluster exhibit a relatively narrow spread in right ascension (332.5 to 340.44 degrees) and declination (26.76 to 35.73 degrees), suggesting a linear or trailing spatial distribution reminiscent of a dragon's tail. With a mix of moderately bright stars (visual magnitudes from 4.29 to 6.56), the pattern evokes the constellation Draco from Greek mythology, known for its serpentine shape winding around the celestial pole."
-    },
-    "100": {
-        "name": "Celaeno's Veil",
-        "reasoning": "Named after Celaeno, one of the Pleiades sisters in Greek mythology, this cluster features a mix of stars with varying brightness, including a notably bright star (visual magnitude 2.49) reminiscent of Celaeno's role as a prominent figure. The stars are clustered in right ascension around 335-348 degrees but spread in declination from 6 to 21 degrees, suggesting a veil-like distribution that conceals and reveals celestial patterns, much like the mythical veils associated with the Pleiades."
-    },
-    "101": {
-        "name": "Apollo's Lyre",
-        "reasoning": "The cluster features a wide spatial spread in right ascension and declination, suggesting a scattered formation, but is anchored by a notably bright star with a visual magnitude of 1.16, reminiscent of Apollo, the Greek god of music, whose lyre shines brightly in mythology. This star's exceptional brightness stands out amidst the others, which range from magnitude 4 to 6, giving the cluster a focal point of brilliance in an otherwise dispersed arrangement."
-    },
-    "104": {
-        "name": "Ariadne's Knot",
-        "reasoning": "The cluster exhibits a dense and tangled spatial distribution with stars closely packed in right ascension around 346-354 degrees and declination around -39 to -45 degrees, including several bright stars (vm < 5.0) that stand out like guiding lights, reminiscent of the intricate knot from Greek mythology that Ariadne gave to Theseus to navigate the Labyrinth."
-    },
-    "102": {
-        "name": "Hydra's Gaze",
-        "reasoning": "The cluster is elongated in right ascension (340.9\u00b0 to 347.46\u00b0) with a spread in declination (-19.61\u00b0 to -10.56\u00b0), resembling the serpentine form of Hydra from Greek mythology. It features a mix of bright stars, including one with a visual magnitude of 3.27, suggesting a watchful or prominent presence akin to the multi-headed serpent's gaze."
-    },
-    "103": {
-        "name": "Serpent's Coil",
-        "reasoning": "The cluster's stars are arranged in a sinuous, elongated pattern across right ascension from 340.75 to 352.93 degrees, with declination variations creating a winding shape reminiscent of a serpent. Named after the serpentine creatures in mythology, such as J\u00f6rmungandr from Norse lore, which encircles the world, reflecting the cluster's spread and cohesive flow."
-    },
-    "105": {
-        "name": "Scattered Titans",
-        "reasoning": "The cluster exhibits a wide spatial distribution with stars spread across right ascension from 343.15 to 352.88 degrees and declination from -13.46 to -1.41 degrees, indicating low density and a scattered formation. This loose, expansive arrangement resembles the dispersed and formidable Titans of Greek mythology, who were primordial giants overthrown and scattered by the Olympian gods, reflecting the cluster's sparse, yet significant, stellar presence."
-    },
-    "106": {
-        "name": "Auriga's Gleaming Saber",
-        "reasoning": "This cluster is distinguished by a linear arrangement of stars between RA 345.35-352.93 and Dec -18.08 to -23.74, reminiscent of a celestial weapon, with three notably bright stars (vm < 4.0) concentrated in the central region, evoking the imagery of Auriga, the charioteer constellation in Greek mythology, known for its bright stars and association with celestial objects."
-    },
-    "107": {
-        "name": "Mimir's Wellspring",
-        "reasoning": "The cluster exhibits a range of visual magnitudes from 4.49 to 7.1, with most stars concentrated between declinations -11.68 to -20.91, suggesting a dense grouping. The dispersion in brightness and cohesive spatial arrangement resembles the Norse mythological figure Mimir, known for his wisdom and the well of knowledge, reflecting the cluster's varied yet unified nature."
-    }
+    "74": "Coiled Serpent's Tail",
+    "0": "Flickering Firefly Swarm",
+    "66": "Southern Iceberg Drift",
+    "1": "Sparse Pebble Path",
+    "4": "Northern Dipper's Handle",
+    "2": "Twin Lantern Glow",
+    "3": "Scattered Marble Cluster",
+    "5": "Southern Whale's Wake",
+    "6": "Crab's Claw Nebula",
+    "7": "Spider's Web of Stars",
+    "8": "Swan's Feather Drift",
+    "9": "Dragon's Scale Array",
+    "10": "Fox's Tail Flicker",
+    "11": "Penguin's Icy Trail",
+    "12": "Frog's Leap Pattern",
+    "13": "Bear's Paw Print",
+    "14": "Jellyfish's Luminous Tentacles",
+    "15": "Owl's Gaze Cluster",
+    "16": "Butterfly's Wing Span",
+    "18": "Scorpion's Sting Arc",
+    "17": "Gecko's Tail Flick",
+    "20": "Seahorse's Curved Body",
+    "19": "Hummingbird's Hover",
+    "21": "Chameleon's Color Shift",
+    "22": "Octopus's Arm Reach",
+    "23": "Sparrow's Flock Formation",
+    "24": "Peacock's Feather Display",
+    "25": "Kangaroo's Pouch Cluster",
+    "26": "Falcon's Dive Path",
+    "27": "Cat's Eye Nebula",
+    "28": "Snail's Spiral Trail",
+    "29": "Bee's Honeycomb Grid",
+    "30": "Eagle's Wing Spread",
+    "31": "Caterpillar's Crawl",
+    "32": "Penguin's March Line",
+    "33": "Polar Bear's Footprints",
+    "34": "Cobra's Hood Pattern",
+    "35": "Dolphin's Leap Arc",
+    "39": "Walrus's Tusk Curve",
+    "36": "Robin's Egg Cluster",
+    "38": "Cheetah's Spot Array",
+    "37": "Giraffe's Neck Reach",
+    "40": "Lizard's Sunbathing Spot",
+    "41": "Hedgehog's Spine Cluster",
+    "42": "Squirrel's Nut Cache",
+    "44": "Seal's Sliding Path",
+    "43": "Armadillo's Rolled Form",
+    "45": "Tortoise's Shell Pattern",
+    "47": "Phoenix's Ashes Scatter",
+    "46": "Moth's Moonlit Flight",
+    "51": "Albatross's Ocean Glide",
+    "48": "Ladybug's Dot Array",
+    "50": "Koala's Tree Hug",
+    "49": "Peacock's Eye Spot",
+    "52": "Cicada's Chorus Ring",
+    "53": "Dragonfly's Hover Zone",
+    "54": "Fire Ant's March Line",
+    "55": "Stingray's Ocean Floor",
+    "56": "Hummingbird's Nest Cluster",
+    "57": "Kingfisher's Dive Pool",
+    "58": "Mosquito's Swarm Cloud",
+    "59": "Cricket's Chirp Field",
+    "60": "Penguin's Ice Floe",
+    "61": "Swan's Lake Reflection",
+    "63": "Grasshopper's Leap Path",
+    "62": "Bat's Twilight Flight",
+    "64": "Heron's Standing Pool",
+    "65": "Chameleon's Tongue Flick",
+    "67": "Robin's Red Breast",
+    "68": "Snowy Owl's Perch",
+    "71": "Flamingo's One-Leg Stand",
+    "69": "Parrot's Feather Rainbow",
+    "70": "Ladybug's Flight Path",
+    "72": "Scorpion's Desert Trail",
+    "73": "Jellyfish's Deep Pulse"
 }

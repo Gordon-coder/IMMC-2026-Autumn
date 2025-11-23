@@ -42,11 +42,10 @@ You are a helpful assistant that analyzes star cluster data.
 The data is organized in clusters, each containing multiple stars with attributes like right ascension (in degrees), declination (in degrees), visual magnitude.
 Your task is to identify patterns, notable features, or any interesting insights from the clusters.
 Provide a suitable name for each cluster based on its characteristics. You may consider factors such as density, brightness, spatial distribution, or any unique configurations of stars within the cluster.
-Please use concise, creative, unique and descriptive names that reflect the cluster's features, preferably referencing ancient mythology (Greek, Roman, Norse, Egyptian, Chinese, etc.). Please only suggest one name per cluster.
-Output your analysis in a json format as such:
+Please use concise, creative, unique and descriptive names that reflect the cluster's features, preferably connecting the lines and referencing daily items and animals instead of giving generic names that can be applied anywhere, using a variety of different adjectives and objects and different objets for each cluster. Please only suggest one name per cluster.
+Output your names in a json format as such:
 {
-    "name": "Cluster Name",
-    "reasoning": "Explanation of why this name was chosen based on the cluster's features."
+    "cluster_id": cluster_name,
 }
 """
 
@@ -57,27 +56,26 @@ def recognise_cluster_patterns(cluster_data):
             {"role": "system", "content": prompt},
             {"role": "user", "content": str(cluster_data)},
         ],
-        stream=False,
+        stream=True,
         response_format={
             'type': 'json_object'
         },
-        temperature=1.5,
-        max_tokens=500,
+        temperature=0.8,
     )
 
-    return json.loads(response.choices[0].message.content)
+    return response
 
 cluster_names = {}
 
-i = 1
-for cluster_id, stars in data.items():
-    analysis = recognise_cluster_patterns(stars)
-    
-    print(f"{i/no_of_clusters:.2f}% done, generated {i} cluster names")
+analysis = recognise_cluster_patterns(data)
 
-    cluster_names[cluster_id] = analysis
-    i = i + 1
+content = ""
+
+for sse in analysis:
+    c = sse.choices[0].delta.content
+    print(c, end="", flush=True)
+    content += c
 
 with open("cluster_names.json", "w") as f:
-    json.dump(cluster_names, f, indent=4)
+    f.write(content)
 
