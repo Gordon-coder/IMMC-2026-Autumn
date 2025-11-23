@@ -22,7 +22,7 @@ eps_deg_range = np.arange(1, 5, delta_eps)
 delta_min_samples = 1
 min_samples_range = np.arange(1, 41, delta_min_samples)
 delta_min_total_weights = 0.01
-min_total_weights_range = np.arange(0.0, 0.5, delta_min_total_weights)
+min_total_weights_range = np.arange(0.0, 1, delta_min_total_weights)
 
 def evaluate_dbscan_parameters(eps_deg, min_samples, min_total_weights):
     stars, vectors, fluxes = load_star_vectors_from_csv("asu_clusters.csv")
